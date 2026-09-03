@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bitácora Vocacional</title>
+<meta name="description" content="Test de orientación vocacional con 22 situaciones para descubrir tus áreas de estudio más afines.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@500;600;700;900&family=Archivo:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<svg style="display:none" aria-hidden="true">
+<defs>
+  <symbol id="ic-ing" viewBox="0 0 48 48">
+    <circle cx="24" cy="24" r="9" fill="none" stroke="currentColor" stroke-width="2.5"/>
+    <circle cx="24" cy="24" r="3.2" fill="none" stroke="currentColor" stroke-width="2.5"/>
+    <g stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+      <line x1="24" y1="8" x2="24" y2="13.5"/>
+      <line x1="24" y1="34.5" x2="24" y2="40"/>
+      <line x1="8" y1="24" x2="13.5" y2="24"/>
+      <line x1="34.5" y1="24" x2="40" y2="24"/>
+      <line x1="12.7" y1="12.7" x2="16.5" y2="16.5"/>
+      <line x1="31.5" y1="31.5" x2="35.3" y2="35.3"/>
+      <line x1="35.3" y1="12.7" x2="31.5" y2="16.5"/>
+      <line x1="16.5" y1="31.5" x2="12.7" y2="35.3"/>
+    </g>
+  </symbol>
+  <symbol id="ic-cen" viewBox="0 0 48 48">
+    <polyline points="19,8 19,19 12,38 36,38 29,19 29,8" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+    <line x1="17" y1="8" x2="31" y2="8" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+    <circle cx="24" cy="30" r="1.8" fill="currentColor"/>
+    <circle cx="18" cy="33" r="1.3" fill="currentColor"/>
+    <circle cx="29" cy="26" r="1.3" fill="currentColor"/>
+  </symbol>
+  <symbol id="ic-sal" viewBox="0 0 48 48">
+    <circle cx="24" cy="24" r="15" fill="none" stroke="currentColor" stroke-width="2.5"/>
+    <line x1="24" y1="16" x2="24" y2="32" stroke="currentColor" stroke-width="2.8" stroke-linecap="round"/>
+    <line x1="16" y1="24" x2="32" y2="24" stroke="currentColor" stroke-width="2.8" stroke-linecap="round"/>
+  </symbol>
+  <symbol id="ic-soc" viewBox="0 0 48 48">
+    <line x1="24" y1="7" x2="24" y2="35" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/>
+    <line x1="18" y1="36" x2="30" y2="36" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/>
+    <line x1="9" y1="14" x2="39" y2="14" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/>
+    <line x1="9" y1="14" x2="6" y2="23" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+    <line x1="9" y1="14" x2="12" y2="23" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+    <line x1="39" y1="14" x2="36" y2="23" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+    <line x1="39" y1="14" x2="42" y2="23" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+    <circle cx="9" cy="25" r="4.2" fill="none" stroke="currentColor" stroke-width="1.8"/>
+    <circle cx="39" cy="25" r="4.2" fill="none" stroke="currentColor" stroke-width="1.8"/>
+  </symbol>
+  <symbol id="ic-eco" viewBox="0 0 48 48">
+    <line x1="9" y1="38" x2="39" y2="38" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+    <rect x="12" y="26" width="6" height="12" fill="none" stroke="currentColor" stroke-width="2.5"/>
+    <rect x="21" y="18" width="6" height="20" fill="none" stroke="currentColor" stroke-width="2.5"/>
+    <rect x="30" y="10" width="6" height="28" fill="none" stroke="currentColor" stroke-width="2.5"/>
+  </symbol>
+  <symbol id="ic-art" viewBox="0 0 48 48">
+    <rect x="8" y="10" width="32" height="24" rx="2" fill="none" stroke="currentColor" stroke-width="2.5"/>
+    <circle cx="17" cy="18" r="3" fill="none" stroke="currentColor" stroke-width="2"/>
+    <polyline points="10,32 19,21 25,27 31,17 38,32" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"/>
+  </symbol>
+  <symbol id="ic-com" viewBox="0 0 48 48">
+    <rect x="8" y="10" width="32" height="20" rx="6" fill="none" stroke="currentColor" stroke-width="2.5"/>
+    <polygon points="16,30 16,37 23,30" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/>
+    <line x1="14" y1="17" x2="34" y2="17" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+    <line x1="14" y1="23" x2="27" y2="23" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+  </symbol>
+  <symbol id="ic-agr" viewBox="0 0 48 48">
+    <line x1="24" y1="10" x2="24" y2="39" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+    <ellipse cx="24" cy="19" rx="10" ry="6" transform="rotate(-35 24 19)" fill="none" stroke="currentColor" stroke-width="2.2"/>
+    <ellipse cx="24" cy="31" rx="10" ry="6" transform="rotate(35 24 31)" fill="none" stroke="currentColor" stroke-width="2.2"/>
+  </symbol>
+  <symbol id="ic-dep" viewBox="0 0 48 48">
+    <circle cx="24" cy="28" r="10" fill="none" stroke="currentColor" stroke-width="2.5"/>
+    <circle cx="24" cy="28" r="4" fill="none" stroke="currentColor" stroke-width="2"/>
+    <line x1="18" y1="19" x2="12" y2="8" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+    <line x1="30" y1="19" x2="36" y2="8" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+  </symbol>
+  <symbol id="ic-seg" viewBox="0 0 48 48">
+    <polygon points="24,8 36,13 36,24 24,40 12,24 12,13" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/>
+    <polyline points="18,23 22,27 30,17" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  </symbol>
+  <symbol id="ic-gas" viewBox="0 0 48 48">
+    <line x1="10" y1="8" x2="10" y2="17" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+    <line x1="14" y1="8" x2="14" y2="40" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+    <line x1="18" y1="8" x2="18" y2="17" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+    <polygon points="32,8 36,8 34,23 34,40 32,40 32,23" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+  </symbol>
+  <symbol id="ic-compass" viewBox="0 0 104 104">
+    <circle cx="52" cy="52" r="46" fill="none" stroke="currentColor" stroke-width="2.5"/>
+    <circle cx="52" cy="52" r="36" fill="none" stroke="currentColor" stroke-width="1" opacity=".5"/>
+    <g class="ticks" stroke="currentColor" stroke-width="1.5" opacity=".7">
+      <line x1="52" y1="6" x2="52" y2="14"/>
+      <line x1="52" y1="90" x2="52" y2="98"/>
+      <line x1="6" y1="52" x2="14" y2="52"/>
+      <line x1="90" y1="52" x2="98" y2="52"/>
+    </g>
+    <text x="52" y="24" text-anchor="middle" font-family="Space Mono, monospace" font-size="9" fill="currentColor">N</text>
+    <g class="needle">
+      <polygon points="52,20 58,52 52,60 46,52" fill="currentColor"/>
+      <polygon points="52,84 58,52 52,44 46,52" fill="currentColor" opacity=".35"/>
+    </g>
+    <circle cx="52" cy="52" r="4" fill="currentColor"/>
+  </symbol>
+</defs>
+</svg>
+
+<div class="shell">
+
+  <header class="topbar">
+    <div class="brand">
+      <svg viewBox="0 0 104 104"><use href="#ic-compass"/></svg>
+      <span class="brand-name">Bitácora <span>Vocacional</span></span>
+    </div>
+    <div class="bearing" id="topBearing"></div>
+  </header>
+
+  <!-- ===== COVER ===== -->
+  <section id="screen-cover">
+    <div class="cover-card">
+      <div class="rose-wrap">
+        <svg class="rose" viewBox="0 0 104 104"><use href="#ic-compass"/></svg>
+      </div>
+      <p class="eyebrow" style="text-align:center;margin-bottom:8px;">Test de orientación · 17–18 años</p>
+      <h1>Encontrá tu rumbo entre las carreras</h1>
+      <p class="cover-sub">22 situaciones cotidianas, sin trampa ni "respuesta correcta". Al final vas a ver hasta 5 áreas de estudio afines a vos, con las carreras concretas que las forman.</p>
+
+      <div class="cover-meta">
+        <div><div class="num">22</div><div class="lbl">Situaciones</div></div>
+        <div><div class="num">~7</div><div class="lbl">Minutos</div></div>
+        <div><div class="num">11</div><div class="lbl">Áreas posibles</div></div>
+      </div>
+
+      <div class="name-field">
+        <label for="nameInput">Tu nombre (opcional)</label>
+        <input id="nameInput" type="text" placeholder="Para personalizar tu resultado" maxlength="40" autocomplete="off">
+      </div>
+
+      <ul class="rules">
+        <li><b>Elegí por instinto:</b> lo primero que te den ganas de hacer, no lo que "queda bien".</li>
+        <li><b>No hay opción neutral:</b> si dos te tientan, elegí la que harías vos, no la más fácil.</li>
+        <li><b>Es orientación, no destino:</b> el resultado te da pistas para investigar, no una sentencia.</li>
+      </ul>
+
+      <div class="btn-row">
+        <button class="btn" id="startBtn">Comenzar el recorrido →</button>
+      </div>
+      <p style="text-align:center;margin-top:16px;">
+        <button class="link-btn" id="blankPdfBtn">🖨️ Imprimir cuestionario en blanco (PDF)</button>
+      </p>
+    </div>
+  </section>
+
+  <!-- ===== QUIZ ===== -->
+  <section id="screen-quiz" hidden>
+    <div class="route">
+      <div class="route-top">
+        <span>Pregunta <span class="now mono" id="qIndex">01</span> / <span id="qTotal">22</span></span>
+        <span id="qBearing">RUMBO 000°</span>
+      </div>
+      <div class="track">
+        <div class="track-fill" id="trackFill"></div>
+        <div class="track-mark" id="trackMark"></div>
+      </div>
+    </div>
+
+    <div class="q-card">
+      <div class="q-num" id="qLabel">SITUACIÓN 01</div>
+      <h2 class="q-text" id="qText"></h2>
+      <ul class="options" id="qOptions"></ul>
+
+      <div class="nav-row">
+        <button class="btn-plain" id="prevBtn">← Anterior</button>
+        <button class="btn" id="nextBtn" disabled>Siguiente →</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== RESULTS ===== -->
+  <section id="screen-results" hidden>
+    <div class="res-head">
+      <p class="eyebrow">Bitácora de resultados</p>
+      <h2 id="resTitle">Tu rumbo probable</h2>
+      <p>Estas son las áreas donde tus respuestas mostraron más afinidad. Dentro de cada una, elegí 1 a 5 carreras concretas para empezar a investigar.</p>
+    </div>
+
+    <ol class="rank-list" id="rankList"></ol>
+
+    <details class="atlas">
+      <summary>Ver la carta completa (las 11 áreas)</summary>
+      <div id="atlasRows" style="margin-top:14px;"></div>
+      <div class="atlas-full">
+        <h4>Atlas completo de carreras por área</h4>
+        <div id="atlasFull"></div>
+      </div>
+    </details>
+
+    <p class="footnote">Este resultado nace de tus propias respuestas y sirve como punto de partida para investigar, hablar con profesionales de esas áreas y, si podés, hacer una orientación vocacional profesional más profunda.</p>
+
+    <div class="btn-row">
+      <button class="btn" id="pdfBtn">⬇ Descargar PDF</button>
+      <button class="btn btn-ghost" id="restartBtn">↺ Repetir el test</button>
+    </div>
+    <p class="btn-note">El PDF se genera en tu navegador; no se sube a ningún servidor.</p>
+  </section>
+
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
