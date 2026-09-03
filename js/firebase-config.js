@@ -5,10 +5,10 @@
 // Reemplazá cada "TU_..." por los valores reales que te da Firebase al crear
 // una "Web App" dentro de tu proyecto (Configuración del proyecto → tus apps → </> Web).
 window.FIREBASE_CONFIG = {
-  apiKey: "TU_API_KEY",
-  authDomain: "TU_PROYECTO.firebaseapp.com",
-  projectId: "TU_PROYECTO",
-  storageBucket: "TU_PROYECTO.appspot.com",
-  messagingSenderId: "TU_SENDER_ID",
-  appId: "TU_APP_ID"
+  apiKey: "AIzaSyA92FCrv_yIVxkKYmmydTwwyt1wXdKCorU",
+  authDomain: "tes-vocacional.firebaseapp.com",
+  projectId: "tes-vocacional",
+  storageBucket: "tes-vocacional.firebasestorage.app",
+  messagingSenderId: "141007476506",
+  appId: "1:141007476506:web:ebd429ecd8d84d30377ea3"
 };

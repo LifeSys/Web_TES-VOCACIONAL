@@ -273,6 +273,7 @@
     var name = $("nameInput").value.trim();
     $("resTitle").textContent = name ? "El rumbo de " + name : "Tu rumbo probable";
     lastResults = { name:name, ranked:ranked, top:ranked.slice(0,5) };
+    saveResultToCloud(name, ranked);
 
     // top 5 (or fewer if there's a clear drop-off — keep 5 for choice as requested)
     var top = ranked.slice(0,5);
@@ -328,6 +329,45 @@
     $("screen-results").hidden = false;
     $("topBearing").textContent = "RESULTADO";
     window.scrollTo({top:0, behavior:"smooth"});
+  }
+
+  // Guarda solo el resultado final (nombre, fecha y áreas afines) en Firestore.
+  // Si Firebase no está configurado (o el dispositivo está offline), falla en
+  // silencio: nunca debe interrumpir el test para quien lo está haciendo.
+  var firebaseAppReady = false;
+  function ensureFirebaseApp(){
+    if (firebaseAppReady) return true;
+    if (typeof firebase === "undefined" || !window.FIREBASE_CONFIG) return false;
+    if (window.FIREBASE_CONFIG.apiKey === "TU_API_KEY") return false; // config sin completar
+    try {
+      if (!firebase.apps.length) firebase.initializeApp(window.FIREBASE_CONFIG);
+      firebaseAppReady = true;
+      return true;
+    } catch (e){
+      console.warn("No se pudo inicializar Firebase:", e);
+      return false;
+    }
+  }
+
+  function saveResultToCloud(name, ranked){
+    if (!ensureFirebaseApp()) return;
+    try {
+      var db = firebase.firestore();
+      var toEntry = function(r){
+        var c = CLUSTERS[r.key];
+        return { key:r.key, area:c.name, pct:r.pct };
+      };
+      db.collection("resultados").add({
+        nombre: name || null,
+        fecha: firebase.firestore.FieldValue.serverTimestamp(),
+        top: ranked.slice(0,5).map(toEntry),
+        ranking: ranked.map(toEntry)
+      }).catch(function(err){
+        console.warn("No se pudo guardar el resultado en la nube:", err);
+      });
+    } catch (e){
+      console.warn("No se pudo guardar el resultado en la nube:", e);
+    }
   }
 
   var ACCENT_MAP = {"á":"a","é":"e","í":"i","ó":"o","ú":"u","ñ":"n","ü":"u","Á":"a","É":"e","Í":"i","Ó":"o","Ú":"u","Ñ":"n","Ü":"u"};
