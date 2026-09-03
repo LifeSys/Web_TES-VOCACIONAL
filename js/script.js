@@ -3,52 +3,54 @@
   var CLUSTERS = {
     ING:{ name:"Ingeniería y Tecnología", icon:"ing",
       blurb:"Construir, programar y optimizar el mundo físico y digital.",
-      careers:["Ingeniería Civil","Ingeniería Industrial","Ingeniería Mecánica","Ingeniería Eléctrica","Ingeniería Electrónica","Ingeniería en Sistemas / Informática","Ingeniería de Software","Ingeniería Mecatrónica","Ingeniería en Robótica","Ingeniería en Telecomunicaciones","Ingeniería Química","Ingeniería Ambiental","Ingeniería Aeronáutica / Aeroespacial","Ingeniería Naval","Ingeniería de Minas","Ingeniería del Petróleo","Ingeniería Biomédica","Ingeniería Nuclear","Ingeniería Textil","Ingeniería Geológica"],
-      short:["Técnico en Electrónica","Técnico en Electromecánica","Técnico Mecánico","Técnico en Mecánica Automotriz","Técnico en Instalaciones Eléctricas","Técnico en Refrigeración y Climatización","Técnico en Soldadura Industrial","Técnico en Programación / Desarrollo de Software","Analista de Sistemas","Técnico en Redes y Telecomunicaciones","Técnico en Mantenimiento Industrial","Técnico en Higiene y Seguridad en el Trabajo","Técnico en Energías Renovables","Técnico en Automatización y Control (PLC)","Técnico Superior en Construcciones","Operador en Mecanizado CNC"]},
+      careers:["Ingeniería Civil","Ingeniería Industrial","Ingeniería Mecánica","Ingeniería Eléctrica","Ingeniería Electrónica","Ingeniería de Sistemas","Ingeniería Informática","Ingeniería de Software","Ingeniería en Ciberseguridad","Ingeniería en Inteligencia Artificial y Ciencia de Datos","Ingeniería Mecatrónica","Ingeniería en Robótica","Ingeniería en Telecomunicaciones","Ingeniería Química","Ingeniería Ambiental","Ingeniería Aeronáutica","Ingeniería Aeroespacial","Ingeniería Naval","Ingeniería de Minas","Ingeniería del Petróleo","Ingeniería Biomédica","Ingeniería Nuclear","Ingeniería Textil","Ingeniería Geológica","Ingeniería Automotriz","Ingeniería Metalúrgica","Ingeniería en Videojuegos"],
+      short:["Técnico en Electrónica","Técnico en Electromecánica","Técnico Mecánico","Técnico en Mecánica Automotriz","Técnico en Instalaciones Eléctricas","Técnico en Refrigeración y Climatización","Técnico en Soldadura Industrial","Técnico en Programación / Desarrollo de Software","Analista de Sistemas","Técnico en Redes y Telecomunicaciones","Técnico en Mantenimiento Industrial","Técnico en Higiene y Seguridad en el Trabajo","Técnico en Energías Renovables","Técnico en Automatización y Control (PLC)","Técnico Superior en Construcciones","Operador en Mecanizado CNC","Técnico en Ciberseguridad","Técnico en Ciencia de Datos","Técnico en Desarrollo de Videojuegos"]},
     CEN:{ name:"Ciencias Exactas y Naturales", icon:"cen",
       blurb:"Investigar, medir y explicar cómo funciona el universo.",
-      careers:["Matemática","Física","Química","Biología","Bioquímica","Astronomía / Astrofísica","Estadística","Geología","Ciencias Ambientales","Biotecnología / Genética","Ciencias de la Computación"],
+      careers:["Matemática","Física","Química","Biología","Bioquímica","Astronomía / Astrofísica","Estadística","Ciencia de Datos","Geología","Ciencias Ambientales","Biotecnología / Genética","Ciencias de la Computación"],
       short:["Técnico en Laboratorio de Análisis Químico y Biológico","Técnico en Análisis Ambiental","Técnico en Meteorología","Técnico en Estadística Aplicada","Técnico en Geociencias","Técnico en Biotecnología","Analista de Datos","Técnico Químico"]},
     SAL:{ name:"Ciencias de la Salud", icon:"sal",
       blurb:"Cuidar el cuerpo y el bienestar de las personas.",
-      careers:["Medicina","Enfermería","Odontología","Psicología","Farmacia","Nutrición y Dietética","Kinesiología / Fisioterapia","Medicina Veterinaria","Fonoaudiología","Obstetricia","Tecnología Médica","Terapia Ocupacional","Optometría","Radiología / Imagenología","Salud Pública"],
+      careers:["Medicina","Enfermería","Odontología","Psicología","Farmacia","Nutrición y Dietética","Kinesiología / Fisioterapia","Medicina Veterinaria","Fonoaudiología","Obstetricia","Tecnología Médica","Terapia Ocupacional","Optometría","Radiología / Imagenología","Salud Pública","Podología","Gerontología"],
       short:["Técnico en Enfermería","Técnico en Emergencias Médicas (Paramédico)","Técnico en Radiología","Técnico en Laboratorio Clínico","Técnico en Farmacia","Técnico en Óptica y Contactología","Técnico en Estética y Cosmetología","Técnico en Prótesis Dental","Auxiliar en Odontología","Masoterapeuta","Técnico en Cuidado de Adultos Mayores","Técnico en Instrumentación Quirúrgica"]},
     SOC:{ name:"Ciencias Sociales, Humanidades y Derecho", icon:"soc",
       blurb:"Entender, argumentar y ordenar la vida en sociedad.",
-      careers:["Derecho","Sociología","Antropología","Filosofía","Historia","Ciencias Políticas","Relaciones Internacionales","Trabajo Social","Educación / Pedagogía","Teología","Lingüística","Criminología","Arqueología","Bibliotecología"],
+      careers:["Derecho","Sociología","Antropología","Filosofía","Historia","Ciencias Políticas","Relaciones Internacionales","Relaciones Laborales","Trabajo Social","Educación / Pedagogía","Teología","Lingüística","Criminología","Arqueología","Bibliotecología"],
       short:["Técnico en Gestión Judicial","Técnico en Mediación y Resolución de Conflictos","Técnico en Acompañamiento Terapéutico","Técnico en Gestión Cultural","Técnico en Gestión Pública","Técnico en Archivología","Intérprete de Lengua de Señas","Técnico en Ceremonial y Protocolo"]},
     ECO:{ name:"Economía, Administración y Negocios", icon:"eco",
       blurb:"Organizar recursos, liderar equipos y hacer crecer proyectos.",
-      careers:["Administración de Empresas","Economía","Contaduría / Auditoría","Finanzas","Marketing","Negocios Internacionales / Comercio Exterior","Recursos Humanos","Logística y Cadena de Suministro","Banca y Seguros","Actuaría","Emprendimiento y Negocios Digitales"],
+      careers:["Administración de Empresas","Economía","Contaduría / Auditoría","Finanzas","Marketing","Negocios Internacionales / Comercio Exterior","Recursos Humanos","Logística y Cadena de Suministro","Banca y Seguros","Actuaría","Emprendimiento y Negocios Digitales","Ingeniería Comercial","Ingeniería en Finanzas","Gestión de Proyectos"],
       short:["Técnico en Administración de Empresas","Técnico en Gestión de Recursos Humanos","Técnico en Comercio Exterior","Martillero y Corredor Público","Técnico en Marketing y Ventas","Técnico en Contabilidad","Técnico en Logística","Técnico en Gestión de Pymes","Corredor Inmobiliario","Técnico en Seguros","Técnico en Comercio Electrónico"]},
     ART:{ name:"Artes, Diseño y Arquitectura", icon:"art",
       blurb:"Darle forma visual y espacial a una idea.",
-      careers:["Arquitectura","Diseño Gráfico","Diseño Industrial","Diseño de Interiores","Diseño de Modas","Bellas Artes","Música","Cine y Artes Audiovisuales","Teatro y Artes Escénicas","Danza","Fotografía","Animación Digital"],
+      careers:["Arquitectura","Diseño Gráfico","Diseño Industrial","Diseño de Interiores","Diseño de Modas","Bellas Artes","Música","Cine y Artes Audiovisuales","Teatro y Artes Escénicas","Danza","Fotografía","Animación Digital","Diseño de Videojuegos","Diseño Multimedia","Diseño de Experiencia de Usuario (UX/UI)","Ilustración"],
       short:["Técnico en Diseño Gráfico","Técnico en Diseño de Interiores","Técnico en Diseño de Indumentaria","Técnico en Ilustración","Técnico en Animación 2D/3D","Técnico en Producción Musical","Técnico en Maquillaje Artístico","Técnico en Escenografía","Técnico en Fotografía","Técnico en Postproducción Audiovisual","Técnico en Diseño Web / UX-UI","Técnico en Cerámica y Artesanías"]},
     COM:{ name:"Comunicación y Letras", icon:"com",
       blurb:"Contar, escribir y traducir ideas para que lleguen a otros.",
-      careers:["Comunicación Social","Periodismo","Publicidad","Letras / Literatura","Traducción e Interpretación","Relaciones Públicas","Producción Multimedia","Marketing Digital / Community Management"],
+      careers:["Comunicación Social","Periodismo","Publicidad","Letras / Literatura","Traducción e Interpretación","Relaciones Públicas","Producción Multimedia","Marketing Digital / Community Management","Guion y Narrativa Audiovisual"],
       short:["Técnico en Producción Periodística","Locutor Nacional","Técnico en Community Management","Técnico en Producción Radial y Televisiva","Corrector de Estilo","Técnico en Guion para Cine y TV","Técnico en Contenidos Digitales","Técnico en Doblaje"]},
     AGR:{ name:"Ciencias Agropecuarias y Ambientales", icon:"agr",
       blurb:"Trabajar la tierra, los animales y los ecosistemas.",
-      careers:["Ingeniería Agronómica","Zootecnia","Ingeniería Forestal","Ingeniería Ambiental Agropecuaria","Acuicultura y Pesquería","Medicina Veterinaria y Zootecnia","Agroindustria","Ingeniería en Alimentos"],
+      careers:["Ingeniería Agronómica","Zootecnia","Ingeniería Forestal","Ingeniería Ambiental Agropecuaria","Acuicultura y Pesquería","Medicina Veterinaria y Zootecnia","Ingeniería Agroindustrial","Ingeniería en Alimentos","Biotecnología Agrícola"],
       short:["Técnico Agropecuario","Técnico en Producción Agropecuaria","Técnico en Jardinería y Paisajismo","Técnico en Viveros","Técnico en Apicultura","Técnico Forestal","Técnico en Piscicultura","Técnico en Manejo de Fauna Silvestre","Técnico en Gestión Ambiental","Técnico en Riego y Manejo de Agua"]},
     DEP:{ name:"Deporte y Actividad Física", icon:"dep",
       blurb:"Entrenar, competir y mejorar el rendimiento del cuerpo.",
-      careers:["Educación Física","Ciencias del Deporte","Entrenamiento Deportivo","Kinesiología Deportiva","Gestión y Administración Deportiva"],
+      careers:["Educación Física","Ciencias del Deporte","Entrenamiento Deportivo","Kinesiología Deportiva","Gestión y Administración Deportiva","Nutrición Deportiva","Ciencias del Ejercicio y la Salud"],
       short:["Técnico en Actividades Físicas y Deportivas","Instructor de Educación Física","Entrenador Personal","Instructor de Yoga y Pilates","Guardavidas","Instructor de Natación","Técnico en Gestión de Instalaciones Deportivas","Preparador Físico"]},
     SEG:{ name:"Seguridad, Defensa y Servicio Público", icon:"seg",
       blurb:"Proteger personas y sostener el orden bajo presión.",
-      careers:["Carrera Militar (Ejército, Marina, Fuerza Aérea)","Carrera Policial","Seguridad y Defensa","Ciencias Náuticas","Piloto de Aviación Comercial","Bomberos / Gestión de Emergencias","Gestión de Riesgos y Desastres"],
-      short:["Técnico Superior en Seguridad Pública","Suboficial de las Fuerzas Armadas","Suboficial de Policía","Técnico en Bomberos","Técnico en Emergencias y Catástrofes","Guardia de Seguridad Privada","Técnico en Defensa Civil","Técnico en Manejo de Materiales Peligrosos","Marinero Mercante"]},
+      careers:["Carrera Militar (Ejército, Marina, Fuerza Aérea)","Carrera Policial","Seguridad y Defensa","Ciencias Náuticas","Piloto de Aviación Comercial","Bomberos / Gestión de Emergencias","Gestión de Riesgos y Desastres","Criminalística","Ciencias Policiales"],
+      short:["Técnico Superior en Seguridad Pública","Suboficial de las Fuerzas Armadas","Suboficial de Policía","Técnico en Bomberos","Técnico en Emergencias y Catástrofes","Guardia de Seguridad Privada","Técnico en Defensa Civil","Técnico en Manejo de Materiales Peligrosos","Marinero Mercante","Técnico en Criminalística","Guardaparque"]},
     GAS:{ name:"Gastronomía, Turismo y Hotelería", icon:"gas",
       blurb:"Crear experiencias de sabor, viaje y hospitalidad.",
       careers:["Gastronomía y Artes Culinarias","Panadería y Pastelería","Administración Hotelera","Turismo","Enología","Guía de Turismo"],
-      short:["Técnico en Gastronomía","Cocinero Profesional","Técnico en Panadería y Pastelería","Bartender Profesional","Sommelier","Técnico en Administración Hotelera","Técnico en Organización de Eventos","Auxiliar de Cabina (Aeronavegante)","Técnico en Agencias de Viajes"]}
+      short:["Técnico en Gastronomía","Cocinero Profesional","Técnico en Panadería y Pastelería","Bartender Profesional","Sommelier","Técnico en Administración Hotelera","Técnico en Organización de Eventos","Auxiliar de Cabina (Aeronavegante)","Técnico en Agencias de Viajes","Barista Profesional"]}
   };
 
   var CLUSTER_ORDER = ["ING","CEN","SAL","SOC","ECO","ART","COM","AGR","DEP","SEG","GAS"];
 
+  // 33 preguntas · cada área aparece exactamente 15 veces (33 = 3 vueltas de 11).
+  // Lenguaje simple a propósito: frases cortas, palabras de todos los días.
   var QUESTIONS = [
   {t:"Es sábado y no tenés nada planeado. ¿Cuál de estas tareas elegirías para pasar la tarde?", o:[
     ["ING","Desarmar un aparato roto para entender por qué falló."],
@@ -61,27 +63,27 @@
     ["COM","Encargarte de contar la idea de forma que todos quieran sumarse."],
     ["AGR","Encargarte de la parte que se hace al aire libre, con plantas o animales."],
     ["DEP","Encargarte de la parte física o del entrenamiento del equipo."],
-    ["SEG","Encargarte de que todo salga según el protocolo, sin improvisar."]]},
+    ["SEG","Encargarte de que todo salga según el plan, sin improvisar."]]},
   {t:"Ganaste una tarde libre para hacer lo que quieras en tu ciudad. ¿Qué elegirías?", o:[
     ["GAS","Ir a probar algo nuevo para comer y anotar mentalmente la receta."],
     ["ING","Visitar una obra o un taller para ver cómo se construye algo."],
     ["CEN","Anotar datos de algo curioso hasta encontrarle un patrón."],
     ["SAL","Acompañar a alguien que necesita ayuda en ese momento."],
-    ["SOC","Ir a un debate, juicio abierto o charla sobre un tema social."]]},
+    ["SOC","Ir a un debate o charla sobre un tema social."]]},
   {t:"Un amigo te pide ayuda con algo urgente. ¿Qué tipo de ayuda te sale más natural dar?", o:[
     ["ECO","Negociar en su nombre hasta conseguirle el mejor trato."],
     ["ART","Convertir su idea confusa en algo visual que se entienda."],
     ["COM","Escribirle el mensaje exacto que necesita mandar."],
     ["AGR","Resolver un problema práctico relacionado con plantas, animales o el aire libre."],
     ["DEP","Armarle una rutina para que llegue mejor a lo que se viene."]]},
-  {t:"Si tuvieras que armar un stand para la feria de talentos del colegio, ¿de qué trataría?", o:[
+  {t:"Si tuvieras que armar un stand para la feria del colegio, ¿de qué trataría?", o:[
     ["SEG","De simulacros de emergencia y primeros pasos ante un riesgo."],
     ["GAS","De algo que la gente pueda probar y llevarse hecho por vos."],
     ["ING","De un mecanismo o programa que armaste vos mismo."],
     ["CEN","De un experimento que la gente pueda ver funcionando."],
     ["SAL","De cómo cuidar el cuerpo o reconocer una emergencia médica."]]},
   {t:"En un campamento con desconocidos, ¿qué tarea del grupo terminarías haciendo vos?", o:[
-    ["SOC","Mediar cuando dos personas no se ponen de acuerdo."],
+    ["SOC","Ayudar cuando dos personas no se ponen de acuerdo."],
     ["ECO","Organizar al grupo y repartir tareas para que todo funcione."],
     ["ART","Elegir cómo se ve y se siente el campamento armado."],
     ["COM","Contar después cómo fue el día de forma que dé ganas de escuchar."],
@@ -98,23 +100,23 @@
     ["ECO","Finanzas personales, negocios o emprendimientos."],
     ["ART","Diseño, arte o arquitectura que te inspira."],
     ["COM","Historias, entrevistas o guiones que escribís vos."]]},
-  {t:"Frente a un imprevisto (no grave), ¿qué es lo primero que harías?", o:[
+  {t:"Pasa algo inesperado (no grave). ¿Qué es lo primero que harías?", o:[
     ["AGR","Revisar si el ambiente o el clima tuvo algo que ver."],
     ["DEP","Reaccionar rápido con el cuerpo antes de pensarlo demasiado."],
-    ["SEG","Tomar el control de la situación hasta que todo esté bajo control."],
+    ["SEG","Tomar el control de la situación hasta calmar todo."],
     ["GAS","Improvisar una solución con lo que tenés a mano."],
-    ["ING","Analizar qué falló en el sistema para que no vuelva a pasar."]]},
+    ["ING","Analizar qué falló para que no vuelva a pasar."]]},
   {t:"Si pudieras resolver un solo problema de tu barrio este año, ¿cuál sería tu enfoque?", o:[
     ["CEN","Medir el problema con datos antes de proponer nada."],
     ["SAL","Enfocarte en cómo afecta la salud de la gente."],
     ["SOC","Enfocarte en la injusticia o la norma que lo permite."],
     ["ECO","Enfocarte en el costo y en cómo financiar la solución."],
-    ["ART","Enfocarte en cómo rediseñar el espacio para que mejore."]]},
+    ["ART","Enfocarte en cómo mejorar el espacio con diseño."]]},
   {t:"De todas estas tareas, ¿cuál te haría perder la noción del tiempo?", o:[
     ["COM","Editar un texto hasta que cada palabra sirva."],
     ["AGR","Cuidar un cultivo o un animal hasta verlo crecer sano."],
     ["DEP","Entrenar hasta superar tu propio récord."],
-    ["SEG","Entrenar un protocolo hasta poder hacerlo sin pensar."],
+    ["SEG","Practicar algo hasta poder hacerlo sin pensar."],
     ["GAS","Ajustar una receta hasta que quede exactamente como querías."]]},
   {t:"Un familiar te pide consejo sobre un problema real. ¿Qué tipo de consejo te sale mejor dar?", o:[
     ["ING","Un consejo técnico, paso a paso, sobre cómo arreglarlo."],
@@ -122,12 +124,12 @@
     ["SAL","Un consejo pensando primero en su bienestar físico o emocional."],
     ["SOC","Un consejo pensando en lo que es justo, más allá de lo fácil."],
     ["ECO","Un consejo pensando en el costo y el beneficio real."]]},
-  {t:"Si te dieran un taller extracurricular gratis, ¿a cuál te anotarías?", o:[
+  {t:"Si te dieran un taller gratis fuera del horario de clase, ¿a cuál te anotarías?", o:[
     ["ART","Dibujo, diseño o un taller de artes visuales."],
     ["COM","Escritura creativa, radio o producción audiovisual."],
     ["AGR","Huerta urbana o cuidado de animales."],
     ["DEP","Preparación física o un deporte que no conocés."],
-    ["SEG","Defensa personal, primeros auxilios o rescate."]]},
+    ["SEG","Defensa personal o primeros auxilios."]]},
   {t:"En un viaje largo en auto con amigos, ¿de qué te encargarías sin que nadie te lo pida?", o:[
     ["SAL","De que todos lleven lo necesario por si alguien se enferma."],
     ["SOC","De resolver la discusión cuando dos no se ponen de acuerdo con el plan."],
@@ -141,16 +143,16 @@
     ["GAS","Algo relacionado con la comida o la forma de servirla."],
     ["ING","Una máquina o un programa que resuelva algo que te molesta."]]},
   {t:"¿Qué actividad de voluntariado elegirías si tuvieras que elegir una?", o:[
-    ["CEN","Divulgar ciencia a chicos más chicos que vos."],
+    ["CEN","Enseñar ciencia a chicos más chicos que vos."],
     ["SAL","Acompañar pacientes o adultos mayores."],
     ["SOC","Dar apoyo legal o social a quien lo necesita."],
-    ["ECO","Ayudar a un emprendimiento comunitario a organizarse."],
+    ["ECO","Ayudar a un emprendimiento del barrio a organizarse."],
     ["ART","Pintar un mural o embellecer un espacio público."]]},
   {t:"Si organizaras un evento para juntar fondos, ¿qué parte armarías vos?", o:[
     ["COM","La campaña: el mensaje que convence a la gente de sumarse."],
     ["AGR","El puesto de comida hecha con ingredientes propios o donados."],
     ["DEP","La parte deportiva: una carrera, torneo o desafío físico."],
-    ["SEG","La logística de seguridad y evacuación del evento."],
+    ["SEG","Que todo esté seguro y ordenado durante el evento."],
     ["GAS","El menú completo, pensado para sorprender a los invitados."]]},
   {t:"¿Qué te daría más satisfacción lograr, aunque nadie más lo note?", o:[
     ["ING","Que el mecanismo que armaste funcione a la primera."],
@@ -163,7 +165,7 @@
     ["COM","Una nota, un guion o un video que hayas producido."],
     ["AGR","Un cultivo o proyecto ambiental que hayas seguido de cerca."],
     ["DEP","Un logro deportivo o un plan de entrenamiento propio."],
-    ["SEG","Una simulación de rescate o de protocolo de emergencia."]]},
+    ["SEG","Una simulación de rescate o de emergencia."]]},
   {t:"Frente a un problema difícil de resolver, ¿cuál es tu primer instinto?", o:[
     ["CEN","Descomponerlo en partes y calcular cada una."],
     ["SAL","Preguntarte primero cómo afecta a las personas involucradas."],
@@ -177,40 +179,131 @@
     ["SEG","Guardavidas o asistente en seguridad de un evento."],
     ["ING","Pasante técnico en una empresa de tecnología o construcción."]]},
   {t:"¿Qué tipo de reto te daría más orgullo superar antes de los 20 años?", o:[
-    ["CEN","Entender a fondo un tema científico complejo."],
+    ["CEN","Entender a fondo un tema de ciencia que te costaba."],
     ["SAL","Ayudar de verdad a alguien que lo necesitaba."],
     ["SOC","Defender una causa hasta lograr un cambio real."],
     ["ECO","Sacar adelante un proyecto o negocio propio."],
-    ["GAS","Crear una receta o experiencia que la gente recuerde."]]}
+    ["GAS","Crear una receta o experiencia que la gente recuerde."]]},
+  {t:"Tenés una tarde libre sin nada planeado. ¿Qué elegirías hacer?", o:[
+    ["ING","Arreglar el wifi o la computadora de tu casa cuando se rompe."],
+    ["CEN","Hacer una pregunta y buscar la respuesta con paciencia."],
+    ["SAL","Curar una herida o poner una curita."],
+    ["SOC","Opinar sobre algo que te parece injusto."],
+    ["ECO","Ahorrar plata para comprar algo que querés."]]},
+  {t:"En un trabajo en grupo, ¿qué tarea pedirías hacer vos?", o:[
+    ["ART","Dibujar o pintar algo que se te ocurrió."],
+    ["COM","Contar un chiste o una historia y que todos te escuchen."],
+    ["AGR","Regar las plantas y ver cómo crecen."],
+    ["DEP","Jugar un partido dando lo mejor de vos."],
+    ["SEG","Ayudar a poner orden cuando hay mucho desorden."]]},
+  {t:"Si pudieras elegir una sola actividad para hoy, ¿cuál sería?", o:[
+    ["GAS","Cocinar algo rico para tu familia."],
+    ["ING","Armar un mueble o algo con tus manos siguiendo un plano."],
+    ["CEN","Anotar en una libreta los resultados de algo que estás probando."],
+    ["SAL","Escuchar a alguien que está triste y ayudarlo a sentirse mejor."],
+    ["SOC","Leer sobre cómo vivía la gente hace muchos años."]]},
+  {t:"Un amigo necesita ayuda. ¿Qué tipo de ayuda te sale más fácil dar?", o:[
+    ["ECO","Vender algo que hiciste vos mismo."],
+    ["ART","Decorar tu cuarto o un espacio para que se vea lindo."],
+    ["COM","Escribir un mensaje largo explicando algo bien."],
+    ["AGR","Dar de comer a un animal y cuidarlo."],
+    ["DEP","Enseñarle un ejercicio nuevo a un amigo."]]},
+  {t:"Si tuvieras que elegir qué hacer en tu tiempo libre, ¿qué elegirías?", o:[
+    ["SEG","Aprender a defenderte o defender a otros."],
+    ["GAS","Armar una mesa linda para una fiesta."],
+    ["ING","Aprender a usar una herramienta nueva sin que nadie te explique."],
+    ["CEN","Resolver un acertijo de números difícil."],
+    ["SAL","Cuidar a un bebé o a una mascota enferma."]]},
+  {t:"En una reunión familiar, ¿qué es lo que más te gusta hacer?", o:[
+    ["SOC","Escuchar los dos lados de una pelea antes de opinar."],
+    ["ECO","Anotar en qué se gasta la plata de un grupo."],
+    ["ART","Sacar fotos y elegir cuál queda mejor."],
+    ["COM","Grabar un video corto para redes sociales."],
+    ["AGR","Plantar algo y esperar a que crezca."]]},
+  {t:"Si te dieran a elegir una tarea para el fin de semana, ¿cuál sería?", o:[
+    ["DEP","Hacer actividad física todos los días."],
+    ["SEG","Seguir las reglas aunque nadie te esté mirando."],
+    ["GAS","Probar comidas nuevas de otros países."],
+    ["ING","Hacer una app o una página web simple."],
+    ["CEN","Mirar las estrellas y preguntarte cómo funciona el universo."]]},
+  {t:"¿Qué actividad elegirías si pudieras practicar algo nuevo?", o:[
+    ["SAL","Aprender cómo funciona el cuerpo humano."],
+    ["SOC","Ayudar a alguien a entender sus derechos."],
+    ["ECO","Armar un plan para juntar plata entre amigos."],
+    ["ART","Armar una coreografía o un baile."],
+    ["COM","Hacer preguntas hasta entender toda una historia."]]},
+  {t:"Si tuvieras que ayudar en tu casa, ¿qué tarea elegirías?", o:[
+    ["AGR","Caminar por el campo o en la naturaleza."],
+    ["DEP","Armar un equipo y organizar un partido."],
+    ["SEG","Avisar rápido si ves algo peligroso."],
+    ["GAS","Atender bien a las visitas en tu casa."],
+    ["ING","Ver cómo funciona por dentro un aparato eléctrico."]]},
+  {t:"¿Cuál de estas actividades te gustaría hacer más seguido?", o:[
+    ["CEN","Separar la basura y pensar en qué pasa con cada tipo."],
+    ["SAL","Estar cerca de alguien en el hospital para acompañarlo."],
+    ["SOC","Hablar en público sobre un tema que te importa."],
+    ["ECO","Pensar cómo hacer que un negocio chico crezca."],
+    ["ART","Crear un personaje o una historia con dibujos."]]},
+  {t:"Antes de dormir, pensás en el día. ¿Qué momento disfrutaste más?", o:[
+    ["COM","Convencer a alguien con buenas palabras."],
+    ["AGR","Aprender de dónde viene la comida que comemos."],
+    ["DEP","Superar un récord personal, aunque sea chico."],
+    ["SEG","Cuidar que nadie se lastime en un evento."],
+    ["GAS","Inventar una mezcla nueva de sabores."]]}
   ];
 
-  // sanity: build per-cluster counters (not required at runtime, just data)
+  function shuffle(arr){
+    var a = arr.slice();
+    for (var i = a.length - 1; i > 0; i--){
+      var j = Math.floor(Math.random() * (i + 1));
+      var tmp = a[i]; a[i] = a[j]; a[j] = tmp;
+    }
+    return a;
+  }
 
-  var state = { idx:0, answers:new Array(QUESTIONS.length).fill(null) };
+  // Cuántas veces aparece cada área entre las preguntas (no es exactamente
+  // parejo), para calcular el % de afinidad sobre su propio máximo real y
+  // que nunca dé un resultado imposible como más de 100%.
+  var CLUSTER_MAX = {};
+  CLUSTER_ORDER.forEach(function(k){ CLUSTER_MAX[k] = 0; });
+  QUESTIONS.forEach(function(q){ q.o.forEach(function(o){ CLUSTER_MAX[o[0]]++; }); });
+
+  // El orden de las preguntas (y de sus opciones) se mezcla en cada intento,
+  // para que dos personas que hagan el test no vean todo en el mismo orden.
+  var sessionQuestions = [];
+  var state = { idx:0, answers:[] };
   var lastResults = null;
+
+  function newSession(){
+    sessionQuestions = shuffle(QUESTIONS).map(function(q){
+      return { t:q.t, o:shuffle(q.o) };
+    });
+    state = { idx:0, answers:new Array(sessionQuestions.length).fill(null) };
+  }
+  newSession();
 
   var $ = function(id){ return document.getElementById(id); };
 
   $("startBtn").addEventListener("click", function(){
+    newSession();
     $("screen-cover").hidden = true;
     $("screen-quiz").hidden = false;
-    $("qTotal").textContent = QUESTIONS.length;
+    $("qTotal").textContent = sessionQuestions.length;
     renderQuestion();
   });
 
   function renderQuestion(){
     var i = state.idx;
-    var q = QUESTIONS[i];
+    var q = sessionQuestions[i];
     $("qIndex").textContent = String(i+1).padStart(2,"0");
-    $("qLabel").textContent = "SITUACIÓN " + String(i+1).padStart(2,"0");
+    $("qLabel").textContent = "PREGUNTA " + String(i+1).padStart(2,"0");
     $("qText").textContent = q.t;
 
-    var pct = (i/(QUESTIONS.length-1))*100;
-    $("trackFill").style.width = (i/(QUESTIONS.length))*100 + "%";
-    $("trackMark").style.left = (i/(QUESTIONS.length-1))*100 + "%";
-    var bearing = Math.round((i/(QUESTIONS.length-1))*359);
-    $("qBearing").textContent = "RUMBO " + String(bearing).padStart(3,"0") + "°";
-    $("topBearing").textContent = "RUMBO " + String(bearing).padStart(3,"0") + "°";
+    $("trackFill").style.width = (i/(sessionQuestions.length))*100 + "%";
+    $("trackMark").style.left = (i/(sessionQuestions.length-1))*100 + "%";
+    var pctDone = Math.round((i/(sessionQuestions.length-1))*100);
+    $("qBearing").textContent = pctDone + "%";
+    $("topBearing").textContent = pctDone + "%";
 
     var list = $("qOptions");
     list.innerHTML = "";
@@ -228,18 +321,18 @@
       li.querySelector("input").addEventListener("change", function(){
         state.answers[i] = oi;
         $("nextBtn").disabled = false;
-        $("nextBtn").textContent = (i === QUESTIONS.length-1) ? "Ver mis resultados →" : "Siguiente →";
+        $("nextBtn").textContent = (i === sessionQuestions.length-1) ? "Ver mis resultados →" : "Siguiente →";
       });
     });
 
     $("nextBtn").disabled = state.answers[i] === null;
-    $("nextBtn").textContent = (i === QUESTIONS.length-1) ? "Ver mis resultados →" : "Siguiente →";
+    $("nextBtn").textContent = (i === sessionQuestions.length-1) ? "Ver mis resultados →" : "Siguiente →";
     $("prevBtn").disabled = i === 0;
   }
 
   $("nextBtn").addEventListener("click", function(){
     if(state.answers[state.idx] === null) return;
-    if(state.idx === QUESTIONS.length-1){
+    if(state.idx === sessionQuestions.length-1){
       finish();
     } else {
       state.idx++;
@@ -257,7 +350,7 @@
     CLUSTER_ORDER.forEach(function(k){ scores[k] = 0; });
     state.answers.forEach(function(ans, i){
       if(ans === null) return;
-      var k = QUESTIONS[i].o[ans][0];
+      var k = sessionQuestions[i].o[ans][0];
       scores[k] += 1;
     });
     return scores;
@@ -265,17 +358,16 @@
 
   function finish(){
     var scores = computeScores();
-    var maxPossible = 10; // each cluster appears in exactly 10 questions
     var ranked = CLUSTER_ORDER.map(function(k){
-      return { key:k, score:scores[k], pct: Math.round((scores[k]/maxPossible)*100) };
-    }).sort(function(a,b){ return b.score - a.score; });
+      return { key:k, score:scores[k], pct: Math.round((scores[k]/CLUSTER_MAX[k])*100) };
+    }).sort(function(a,b){ return b.pct - a.pct || b.score - a.score; });
 
     var name = $("nameInput").value.trim();
-    $("resTitle").textContent = name ? "El rumbo de " + name : "Tu rumbo probable";
+    $("resTitle").textContent = name ? "El resultado de " + name : "Tu resultado vocacional";
     lastResults = { name:name, ranked:ranked, top:ranked.slice(0,5) };
     saveResultToCloud(name, ranked);
 
-    // top 5 (or fewer if there's a clear drop-off — keep 5 for choice as requested)
+    // top 5 (o menos si hay un salto claro — dejamos 5 para elegir, como se pidió)
     var top = ranked.slice(0,5);
     var rankList = $("rankList");
     rankList.innerHTML = "";
@@ -298,7 +390,7 @@
       rankList.appendChild(li);
     });
 
-    // full atlas (all 11, compact bars)
+    // atlas completo (las 11, barras compactas)
     var atlasRows = $("atlasRows");
     atlasRows.innerHTML = "";
     ranked.forEach(function(r){
@@ -312,7 +404,7 @@
       atlasRows.appendChild(row);
     });
 
-    // full career catalog, grouped, regardless of score
+    // catálogo completo de carreras, agrupado, sin importar el puntaje
     var atlasFull = $("atlasFull");
     atlasFull.innerHTML = "";
     CLUSTER_ORDER.forEach(function(k){
@@ -391,11 +483,11 @@
     var contentW = pageW - margin*2;
     var y = margin;
 
-    var INK=[27,42,65], MUTED=[91,100,114], ACCENT=[138,87,22], ACCENT2=[30,76,73], LINE=[207,199,172];
+    var INK=[10,44,94], MUTED=[85,97,122], ACCENT=[9,86,184], ACCENT2=[20,138,115], LINE=[190,201,224];
 
     function header(){
       doc.setFont("courier","bold"); doc.setFontSize(9); doc.setTextColor(ACCENT2[0],ACCENT2[1],ACCENT2[2]);
-      doc.text("BITÁCORA VOCACIONAL", margin, y);
+      doc.text("VOCACIONAL LIFE IA", margin, y);
       doc.setTextColor(MUTED[0],MUTED[1],MUTED[2]);
       doc.text(new Date().toLocaleDateString("es-AR"), pageW-margin, y, {align:"right"});
       y += 8;
@@ -409,7 +501,7 @@
     header();
 
     doc.setFont("times","bold"); doc.setFontSize(22); doc.setTextColor(INK[0],INK[1],INK[2]);
-    doc.text(lastResults.name ? ("El rumbo de " + lastResults.name) : "Tu rumbo probable", margin, y);
+    doc.text(lastResults.name ? ("El resultado de " + lastResults.name) : "Tu resultado vocacional", margin, y);
     y += 20;
     doc.setFont("helvetica","normal"); doc.setFontSize(10.5); doc.setTextColor(MUTED[0],MUTED[1],MUTED[2]);
     var intro = doc.splitTextToSize("Áreas de estudio con más afinidad según tus respuestas. Dentro de cada una, las carreras concretas para empezar a investigar.", contentW);
@@ -456,7 +548,7 @@
 
     newPage();
     doc.setFont("times","bold"); doc.setFontSize(16); doc.setTextColor(INK[0],INK[1],INK[2]);
-    doc.text("Carta completa · las 11 áreas", margin, y);
+    doc.text("Detalle completo · las 11 áreas", margin, y);
     y += 22;
     lastResults.ranked.forEach(function(r){
       var c = CLUSTERS[r.key];
@@ -503,12 +595,13 @@
     doc.text(foot, margin, y);
 
     var blob = doc.output("blob");
-    var filename = "bitacora-vocacional" + (lastResults.name ? ("-" + slugify(lastResults.name)) : "") + ".pdf";
+    var filename = "vocacional-life-ia" + (lastResults.name ? ("-" + slugify(lastResults.name)) : "") + ".pdf";
     return offerFile(blob, filename);
   }
 
   function generateBlankPDF(){
     if (!window.jspdf){ window.print(); return Promise.resolve(); }
+    if (!sessionQuestions.length) newSession();
 
     var jsPDF = window.jspdf.jsPDF;
     var doc = new jsPDF({ unit:"pt", format:"a4" });
@@ -518,11 +611,11 @@
     var contentW = pageW - margin*2;
     var y = margin;
 
-    var INK=[27,42,65], MUTED=[91,100,114], ACCENT2=[30,76,73], LINE=[207,199,172];
+    var INK=[10,44,94], MUTED=[85,97,122], ACCENT2=[20,138,115], LINE=[190,201,224];
 
     function header(){
       doc.setFont("courier","bold"); doc.setFontSize(9); doc.setTextColor(ACCENT2[0],ACCENT2[1],ACCENT2[2]);
-      doc.text("BITÁCORA VOCACIONAL · CUESTIONARIO IMPRESO", margin, y);
+      doc.text("VOCACIONAL LIFE IA · CUESTIONARIO IMPRESO", margin, y);
       y += 8;
       doc.setDrawColor(LINE[0],LINE[1],LINE[2]); doc.setLineWidth(0.75);
       doc.line(margin, y, pageW-margin, y);
@@ -552,7 +645,7 @@
     doc.line(margin, y, pageW-margin, y);
     y += 26;
 
-    QUESTIONS.forEach(function(q, qi){
+    sessionQuestions.forEach(function(q, qi){
       ensure(30);
       doc.setFont("times","bold"); doc.setFontSize(11.5); doc.setTextColor(INK[0],INK[1],INK[2]);
       var qLines = doc.splitTextToSize((qi+1) + ". " + q.t, contentW);
@@ -583,7 +676,7 @@
     doc.text(linkNote, margin, y);
 
     var blob = doc.output("blob");
-    return offerFile(blob, "bitacora-vocacional-cuestionario-en-blanco.pdf");
+    return offerFile(blob, "vocacional-life-ia-cuestionario-en-blanco.pdf");
   }
 
   function offerFile(blob, filename){
@@ -642,7 +735,7 @@
   });
 
   $("restartBtn").addEventListener("click", function(){
-    state = { idx:0, answers:new Array(QUESTIONS.length).fill(null) };
+    newSession();
     $("screen-results").hidden = true;
     $("screen-cover").hidden = false;
     $("topBearing").textContent = "";

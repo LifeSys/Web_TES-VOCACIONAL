@@ -1,15 +1,8 @@
-:root{
-  --danger:#B3413B;
-}
-@media (prefers-color-scheme: dark){
-  :root:not([data-theme="light"]){ --danger:#E68A82; }
-}
-:root[data-theme="dark"]{ --danger:#E68A82; }
-
 .admin-card{
   background:var(--surface);
   border:1px solid var(--border);
-  border-radius:6px;
+  border-radius:14px;
+  box-shadow:var(--shadow-md);
   padding:40px 34px;
   max-width:420px;
   margin:40px auto 0;
@@ -27,7 +20,7 @@
 .admin-field input{
   padding:11px 14px;
   border:1px solid var(--border);
-  border-radius:4px;
+  border-radius:8px;
   background:var(--bg);
   color:var(--text);
   font-size:1rem;
@@ -56,7 +49,8 @@
 .admin-table-wrap{
   overflow-x:auto;
   border:1px solid var(--border);
-  border-radius:6px;
+  border-radius:12px;
+  box-shadow:var(--shadow-sm);
 }
 .admin-table{
   width:100%;

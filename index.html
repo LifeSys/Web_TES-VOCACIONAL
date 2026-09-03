@@ -3,11 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Bitácora Vocacional</title>
-<meta name="description" content="Test de orientación vocacional con 22 situaciones para descubrir tus áreas de estudio más afines.">
+<title>Vocacional Life IA</title>
+<meta name="description" content="Test de orientación vocacional con IA: descubrí tus áreas de estudio más afines entre carreras universitarias y técnicas.">
+<link rel="icon" href="img/LOGO.png" type="image/png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@500;600;700;900&family=Archivo:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -90,22 +91,7 @@
     <line x1="18" y1="8" x2="18" y2="17" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
     <polygon points="32,8 36,8 34,23 34,40 32,40 32,23" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
   </symbol>
-  <symbol id="ic-compass" viewBox="0 0 104 104">
-    <circle cx="52" cy="52" r="46" fill="none" stroke="currentColor" stroke-width="2.5"/>
-    <circle cx="52" cy="52" r="36" fill="none" stroke="currentColor" stroke-width="1" opacity=".5"/>
-    <g class="ticks" stroke="currentColor" stroke-width="1.5" opacity=".7">
-      <line x1="52" y1="6" x2="52" y2="14"/>
-      <line x1="52" y1="90" x2="52" y2="98"/>
-      <line x1="6" y1="52" x2="14" y2="52"/>
-      <line x1="90" y1="52" x2="98" y2="52"/>
-    </g>
-    <text x="52" y="24" text-anchor="middle" font-family="Space Mono, monospace" font-size="9" fill="currentColor">N</text>
-    <g class="needle">
-      <polygon points="52,20 58,52 52,60 46,52" fill="currentColor"/>
-      <polygon points="52,84 58,52 52,44 46,52" fill="currentColor" opacity=".35"/>
-    </g>
-    <circle cx="52" cy="52" r="4" fill="currentColor"/>
-  </symbol>
+
 </defs>
 </svg>
 
@@ -113,8 +99,7 @@
 
   <header class="topbar">
     <div class="brand">
-      <svg viewBox="0 0 104 104"><use href="#ic-compass"/></svg>
-      <span class="brand-name">Bitácora <span>Vocacional</span></span>
+      <img src="img/LOGO.png" alt="Vocacional Life IA">
     </div>
     <div class="bearing" id="topBearing"></div>
   </header>
@@ -122,16 +107,13 @@
   <!-- ===== COVER ===== -->
   <section id="screen-cover">
     <div class="cover-card">
-      <div class="rose-wrap">
-        <svg class="rose" viewBox="0 0 104 104"><use href="#ic-compass"/></svg>
-      </div>
-      <p class="eyebrow" style="text-align:center;margin-bottom:8px;">Test de orientación · 17–18 años</p>
-      <h1>Encontrá tu rumbo entre las carreras</h1>
-      <p class="cover-sub">22 situaciones cotidianas, sin trampa ni "respuesta correcta". Al final vas a ver hasta 5 áreas de estudio afines a vos, con las carreras concretas que las forman.</p>
+      <p class="eyebrow" style="text-align:center;margin-bottom:8px;">Orientación vocacional · 17–18 años</p>
+      <h1>Descubrí la carrera ideal para vos</h1>
+      <p class="cover-sub">Respondé situaciones simples de todos los días, sin trucos ni "respuesta correcta". Al final vas a ver hasta 5 áreas de estudio que más te representan, con las carreras concretas de cada una.</p>
 
       <div class="cover-meta">
-        <div><div class="num">22</div><div class="lbl">Situaciones</div></div>
-        <div><div class="num">~7</div><div class="lbl">Minutos</div></div>
+        <div><div class="num" id="coverQCount">33</div><div class="lbl">Preguntas</div></div>
+        <div><div class="num">~8</div><div class="lbl">Minutos</div></div>
         <div><div class="num">11</div><div class="lbl">Áreas posibles</div></div>
       </div>
 
@@ -159,8 +141,8 @@
   <section id="screen-quiz" hidden>
     <div class="route">
       <div class="route-top">
-        <span>Pregunta <span class="now mono" id="qIndex">01</span> / <span id="qTotal">22</span></span>
-        <span id="qBearing">RUMBO 000°</span>
+        <span>Pregunta <span class="now mono" id="qIndex">01</span> / <span id="qTotal">33</span></span>
+        <span id="qBearing" class="mono">0%</span>
       </div>
       <div class="track">
         <div class="track-fill" id="trackFill"></div>
@@ -169,7 +151,7 @@
     </div>
 
     <div class="q-card">
-      <div class="q-num" id="qLabel">SITUACIÓN 01</div>
+      <div class="q-num" id="qLabel">PREGUNTA 01</div>
       <h2 class="q-text" id="qText"></h2>
       <ul class="options" id="qOptions"></ul>
 
@@ -183,15 +165,15 @@
   <!-- ===== RESULTS ===== -->
   <section id="screen-results" hidden>
     <div class="res-head">
-      <p class="eyebrow">Bitácora de resultados</p>
-      <h2 id="resTitle">Tu rumbo probable</h2>
+      <p class="eyebrow">Resultado del test</p>
+      <h2 id="resTitle">Tu resultado vocacional</h2>
       <p>Estas son las áreas donde tus respuestas mostraron más afinidad. Dentro de cada una, elegí 1 a 5 carreras concretas para empezar a investigar.</p>
     </div>
 
     <ol class="rank-list" id="rankList"></ol>
 
     <details class="atlas">
-      <summary>Ver la carta completa (las 11 áreas)</summary>
+      <summary>Ver el detalle completo (las 11 áreas)</summary>
       <div id="atlasRows" style="margin-top:14px;"></div>
       <div class="atlas-full">
         <h4>Atlas completo de carreras por área</h4>
