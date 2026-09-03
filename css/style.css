@@ -503,6 +503,14 @@
     margin-inline:auto;
   }
 
+  .admin-link{
+    font-size:.78rem;
+    color:var(--text-muted);
+    text-decoration:underline;
+    text-underline-offset:3px;
+  }
+  .admin-link:hover{ color:var(--accent-2); }
+
   @media (max-width:520px){
     .cover-card{ padding:34px 22px; }
     .q-card{ padding:26px 20px; }
