@@ -1,19 +1,19 @@
 # Base de datos (Firebase) — guía de configuración
 
-El sitio ahora guarda automáticamente el resultado de cada persona que hace el
-test (nombre, fecha y áreas afines) en una base de datos en la nube gratuita
-(Firebase Firestore), y `admin.html` te deja verlos en una tabla con login
-protegido.
+El sitio guarda automáticamente el resultado de cada persona que hace el test
+(nombre, fecha, áreas afines y una copia del PDF) en Firebase, y `admin.html`
+te deja verlos en una tabla con login protegido.
 
-Nada de esto anda todavía porque falta crear el proyecto de Firebase — eso
-requiere tu cuenta de Google, así que lo tenés que hacer vos. Son ~10 minutos,
-paso a paso:
+Ya hiciste los pasos 1 a 4 (tu proyecto se llama `tes-vocacional` y ya está
+conectado). Esta guía queda completa por si alguna vez necesitás repetir el
+proceso — por ejemplo en un proyecto nuevo. Lo único pendiente es el **paso 5
+(Storage)**, para que los PDF también se guarden.
 
 ## 1. Crear el proyecto
 
 1. Entrá a **https://console.firebase.google.com** con tu cuenta de Google.
-2. **Agregar proyecto** → ponele un nombre (ej. `bitacora-vocacional`) → seguí
-   los pasos (podés desactivar Google Analytics, no hace falta).
+2. **Agregar proyecto** → ponele un nombre → seguí los pasos (podés
+   desactivar Google Analytics, no hace falta).
 
 ## 2. Crear la base de datos (Firestore)
 
@@ -35,9 +35,10 @@ service cloud.firestore {
 }
 ```
 
-Esto deja que cualquiera que haga el test **guarde** su resultado, pero solo
-alguien logueado (vos) puede **leer/listar** los resultados. Click en
-**Publicar**.
+Esto deja que cualquiera que haga el test **guarde** su resultado y que el
+propio sitio pueda **actualizar** ese resultado una sola vez (para agregar el
+link del PDF una vez que termina de subirse). Solo alguien logueado (vos)
+puede **leer/listar** los resultados. Click en **Publicar**.
 
 ## 3. Activar el login del panel (Authentication)
 
@@ -59,17 +60,56 @@ alguien logueado (vos) puede **leer/listar** los resultados. Click en
 Estos valores **no son secretos** — Firebase los protege con las Reglas del
 paso 2, no ocultándolos. Está bien que queden en el código público del repo.
 
-## 5. Probar
+## 5. Activar Storage (para guardar también los PDF) — pendiente
 
-1. Subí los cambios a GitHub (`git add . && git commit -m "Agregar base de datos" && git push`).
+Cada vez que alguien termina el test, el sitio genera su PDF de resultado en
+segundo plano y lo sube acá, guardando el link en Firestore para que te
+aparezca el botón **"Ver PDF"** en el panel.
+
+1. Menú izquierdo: **Compilación → Storage → Comenzar**.
+2. Elegí modo **producción** → la misma ubicación que usaste en Firestore →
+   **Listo**.
+3. Andá a la pestaña **Rules** de Storage y reemplazá todo por esto:
+
+```
+rules_version = '2';
+service firebase.storage {
+  match /b/{bucket}/o {
+    match /resultados-pdf/{archivo} {
+      allow write: if request.resource.size < 15 * 1024 * 1024
+                   && request.resource.contentType == 'application/pdf';
+      allow read: if request.auth != null;
+    }
+  }
+}
+```
+
+Esto deja que el sitio suba el PDF de cualquiera que termine el test (con un
+límite de 15 MB, de sobra para esto), y que solo alguien logueado pueda
+listar o inspeccionar los archivos desde la consola de Firebase.
+
+Un detalle a tener en cuenta: el link "Ver PDF" que ves en el panel es un
+link con un código largo y único (así funciona Firebase) — cualquiera que
+tenga ese link exacto puede abrir ese PDF puntual sin necesitar loguearse,
+aunque nadie puede adivinarlo ni ver la lista completa sin tu usuario. Es el
+mismo modelo que un link "para cualquiera que lo tenga" de Google Drive.
+
+4. Click en **Publicar** y listo — no hace falta tocar nada más del código,
+   ya está todo preparado para usarlo apenas actives esto.
+
+## 6. Probar
+
+1. Subí los cambios a GitHub (`git add . && git commit -m "..." && git push`).
 2. Entrá a tu sitio y hacé el test completo.
-3. Andá a `tusitio.github.io/.../admin.html`, iniciá sesión con el usuario
-   que creaste en el paso 3, y deberías ver esa respuesta en la tabla.
+3. Andá a `tusitio.github.io/.../admin.html`, iniciá sesión, y deberías ver
+   esa respuesta en la tabla con un link **"Ver PDF"** (puede tardar unos
+   segundos en aparecer mientras se termina de subir).
 
 ## Qué se guarda (y qué no)
 
-- ✅ Nombre (si lo puso), fecha y hora, y las 11 áreas con su % de afinidad.
-- ❌ No se guarda el detalle de qué opción marcó en cada una de las 22
+- ✅ Nombre (si lo puso), fecha y hora, las 11 áreas con su % de afinidad, y
+  una copia del PDF de resultado.
+- ❌ No se guarda el detalle de qué opción marcó en cada una de las 50
   preguntas — solo el resultado final agregado.
 
 ## Límite importante

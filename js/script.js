@@ -500,7 +500,9 @@
     var name = $("nameInput").value.trim();
     $("resTitle").textContent = name ? "El resultado de " + name : "Tu resultado vocacional";
     lastResults = { name:name, ranked:ranked, top:ranked.slice(0,5) };
-    saveResultToCloud(name, ranked);
+    saveResultToCloud(name, ranked).then(function(docRef){
+      if (docRef) backgroundUploadResultPdf(docRef, lastResults);
+    });
 
     // top 5 (o menos si hay un salto claro — dejamos 5 para elegir, como se pidió)
     var top = ranked.slice(0,5);
@@ -586,23 +588,47 @@
   }
 
   function saveResultToCloud(name, ranked){
-    if (!ensureFirebaseApp()) return;
+    if (!ensureFirebaseApp()) return Promise.resolve(null);
     try {
       var db = firebase.firestore();
       var toEntry = function(r){
         var c = CLUSTERS[r.key];
         return { key:r.key, area:c.name, pct:r.pct };
       };
-      db.collection("resultados").add({
+      return db.collection("resultados").add({
         nombre: name || null,
         fecha: firebase.firestore.FieldValue.serverTimestamp(),
         top: ranked.slice(0,5).map(toEntry),
-        ranking: ranked.map(toEntry)
+        ranking: ranked.map(toEntry),
+        pdfUrl: null
       }).catch(function(err){
         console.warn("No se pudo guardar el resultado en la nube:", err);
+        return null;
       });
     } catch (e){
       console.warn("No se pudo guardar el resultado en la nube:", e);
+      return Promise.resolve(null);
+    }
+  }
+
+  // Genera el mismo PDF del resultado en segundo plano (sin pedirle nada a
+  // quien hizo el test) y lo sube a Firebase Storage, guardando el link en
+  // su documento de Firestore para que el administrador lo vea en el panel.
+  // Si Storage no está habilitado o algo falla, no interrumpe nada: el test
+  // y el guardado del resultado ya terminaron antes de intentar esto.
+  function backgroundUploadResultPdf(docRef, results){
+    if (!docRef || !window.jspdf) return;
+    if (typeof firebase === "undefined" || typeof firebase.storage !== "function") return;
+    var built = buildResultsPdf(results);
+    if (!built) return;
+    try {
+      var ref = firebase.storage().ref().child("resultados-pdf/" + docRef.id + ".pdf");
+      ref.put(built.blob, { contentType:"application/pdf" })
+        .then(function(snapshot){ return snapshot.ref.getDownloadURL(); })
+        .then(function(url){ return docRef.update({ pdfUrl:url }); })
+        .catch(function(err){ console.warn("No se pudo subir el PDF a la nube:", err); });
+    } catch (e){
+      console.warn("No se pudo subir el PDF a la nube:", e);
     }
   }
 
@@ -617,7 +643,16 @@
   }
 
   function generatePDF(){
-    if (!lastResults || !window.jspdf){ window.print(); return Promise.resolve(); }
+    var built = buildResultsPdf(lastResults);
+    if (!built){ window.print(); return Promise.resolve(); }
+    return offerFile(built.blob, built.filename);
+  }
+
+  // Arma el PDF del resultado y devuelve { blob, filename } sin ofrecerlo
+  // para descargar — lo usan tanto el botón "Descargar PDF" como la subida
+  // automática en segundo plano para el panel del administrador.
+  function buildResultsPdf(results){
+    if (!results || !window.jspdf) return null;
 
     var jsPDF = window.jspdf.jsPDF;
     var doc = new jsPDF({ unit:"pt", format:"a4" });
@@ -645,14 +680,14 @@
     header();
 
     doc.setFont("times","bold"); doc.setFontSize(22); doc.setTextColor(INK[0],INK[1],INK[2]);
-    doc.text(lastResults.name ? ("El resultado de " + lastResults.name) : "Tu resultado vocacional", margin, y);
+    doc.text(results.name ? ("El resultado de " + results.name) : "Tu resultado vocacional", margin, y);
     y += 20;
     doc.setFont("helvetica","normal"); doc.setFontSize(10.5); doc.setTextColor(MUTED[0],MUTED[1],MUTED[2]);
     var intro = doc.splitTextToSize("Áreas de estudio con más afinidad según tus respuestas. Dentro de cada una, las carreras concretas para empezar a investigar.", contentW);
     doc.text(intro, margin, y);
     y += intro.length*13 + 18;
 
-    lastResults.top.forEach(function(r, idx){
+    results.top.forEach(function(r, idx){
       var c = CLUSTERS[r.key];
       var rankColor = idx===0 ? ACCENT : MUTED;
       var pctColor = idx===0 ? ACCENT : ACCENT2;
@@ -694,7 +729,7 @@
     doc.setFont("times","bold"); doc.setFontSize(16); doc.setTextColor(INK[0],INK[1],INK[2]);
     doc.text("Detalle completo · las 11 áreas", margin, y);
     y += 22;
-    lastResults.ranked.forEach(function(r){
+    results.ranked.forEach(function(r){
       var c = CLUSTERS[r.key];
       ensure(16);
       doc.setFont("helvetica","normal"); doc.setFontSize(10); doc.setTextColor(INK[0],INK[1],INK[2]);
@@ -739,8 +774,8 @@
     doc.text(foot, margin, y);
 
     var blob = doc.output("blob");
-    var filename = "vocacional-life-ia" + (lastResults.name ? ("-" + slugify(lastResults.name)) : "") + ".pdf";
-    return offerFile(blob, filename);
+    var filename = "vocacional-life-ia" + (results.name ? ("-" + slugify(results.name)) : "") + ".pdf";
+    return { blob:blob, filename:filename };
   }
 
   function generateBlankPDF(){

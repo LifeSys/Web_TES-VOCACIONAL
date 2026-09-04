@@ -78,4 +78,6 @@
   border-top:none;
   padding-top:0;
 }
+.admin-table td a{ color:var(--accent-2); font-weight:600; text-decoration:none; white-space:nowrap; }
+.admin-table td a:hover{ text-decoration:underline; }
 .muted{ color:var(--text-muted); font-style:italic; }

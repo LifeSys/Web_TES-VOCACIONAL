@@ -48,6 +48,10 @@
         var top = d.top || [];
         var full = d.ranking || top;
 
+        var pdfCell = d.pdfUrl
+          ? '<a href="' + d.pdfUrl + '" target="_blank" rel="noopener">Ver PDF</a>'
+          : '<span class="muted">—</span>';
+
         var tr = document.createElement("tr");
         tr.innerHTML =
           '<td class="mono">' + fmtDate(d.fecha) + '</td>' +
@@ -55,13 +59,14 @@
           '<td>' + areaCell(top[0]) + '</td>' +
           '<td>' + areaCell(top[1]) + '</td>' +
           '<td>' + areaCell(top[2]) + '</td>' +
+          '<td>' + pdfCell + '</td>' +
           '<td><button class="link-btn detail-btn" type="button">Ver todo</button></td>';
 
         var detailRow = document.createElement("tr");
         detailRow.className = "detail-row";
         detailRow.hidden = true;
         var chips = full.map(function(r){ return '<span class="career-chip">' + r.area + ' · ' + r.pct + '%</span>'; }).join("");
-        detailRow.innerHTML = '<td colspan="6"><div class="careers" style="margin-top:4px;">' + chips + '</div></td>';
+        detailRow.innerHTML = '<td colspan="7"><div class="careers" style="margin-top:4px;">' + chips + '</div></td>';
 
         tr.querySelector(".detail-btn").addEventListener("click", function(){
           detailRow.hidden = !detailRow.hidden;
