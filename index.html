@@ -112,8 +112,8 @@
       <p class="cover-sub">Respondé situaciones simples de todos los días, sin trucos ni "respuesta correcta". Al final vas a ver hasta 5 áreas de estudio que más te representan, con las carreras concretas de cada una.</p>
 
       <div class="cover-meta">
-        <div><div class="num" id="coverQCount">33</div><div class="lbl">Preguntas</div></div>
-        <div><div class="num">~8</div><div class="lbl">Minutos</div></div>
+        <div><div class="num" id="coverQCount">50</div><div class="lbl">Preguntas</div></div>
+        <div><div class="num">~12</div><div class="lbl">Minutos</div></div>
         <div><div class="num">11</div><div class="lbl">Áreas posibles</div></div>
       </div>
 
@@ -141,7 +141,7 @@
   <section id="screen-quiz" hidden>
     <div class="route">
       <div class="route-top">
-        <span>Pregunta <span class="now mono" id="qIndex">01</span> / <span id="qTotal">33</span></span>
+        <span>Pregunta <span class="now mono" id="qIndex">01</span> / <span id="qTotal">50</span></span>
         <span id="qBearing" class="mono">0%</span>
       </div>
       <div class="track">
@@ -154,6 +154,7 @@
       <div class="q-num" id="qLabel">PREGUNTA 01</div>
       <h2 class="q-text" id="qText"></h2>
       <ul class="options" id="qOptions"></ul>
+      <p class="kbd-hint">Tip: presioná <span class="mono">1-5</span> para elegir y <span class="mono">Enter</span> para continuar.</p>
 
       <div class="nav-row">
         <button class="btn-plain" id="prevBtn">← Anterior</button>
@@ -172,7 +173,7 @@
 
     <ol class="rank-list" id="rankList"></ol>
 
-    <details class="atlas">
+    <details class="atlas no-print">
       <summary>Ver el detalle completo (las 11 áreas)</summary>
       <div id="atlasRows" style="margin-top:14px;"></div>
       <div class="atlas-full">
@@ -183,18 +184,36 @@
 
     <p class="footnote">Este resultado nace de tus propias respuestas y sirve como punto de partida para investigar, hablar con profesionales de esas áreas y, si podés, hacer una orientación vocacional profesional más profunda.</p>
 
-    <div class="btn-row">
+    <div class="btn-row no-print">
       <button class="btn" id="pdfBtn">⬇ Descargar PDF</button>
       <button class="btn btn-ghost" id="restartBtn">↺ Repetir el test</button>
     </div>
-    <p class="btn-note">El PDF se genera en tu navegador. Solo el resultado (nombre y áreas afines) se guarda para seguimiento.</p>
+    <p class="btn-note no-print">El PDF se genera en tu navegador. Al terminar el test también se abre la ventana de impresión automáticamente. Solo el resultado (nombre y áreas afines) se guarda para seguimiento.</p>
   </section>
 
 </div>
 
-<p style="text-align:center;margin-top:36px;">
-  <a href="admin.html" class="admin-link">Panel del administrador</a>
-</p>
+<footer class="site-footer">
+  <div class="site-footer-top">
+    <div class="site-footer-brand">
+      <strong>Vocacional Life IA</strong>
+      <span>Un producto de Life System Solution</span>
+    </div>
+    <div class="site-footer-contact">
+      <span>Tel. / WhatsApp: <a href="tel:906127991">906 127 991</a></span>
+      <span>Email: <a href="mailto:soportedigitalife@gmail.com">soportedigitalife@gmail.com</a></span>
+      <span class="no-print"><a href="admin.html" class="admin-link">Panel del administrador</a></span>
+    </div>
+  </div>
+  <p class="site-footer-legal">
+    © <span id="footerYear">2026</span> Life System Solution — <b>Johann Sebastian Guevara Elías</b>. Todos los derechos reservados.
+    Queda prohibida la reproducción total o parcial de este sitio, su diseño y sus contenidos sin autorización previa.
+  </p>
+  <p class="site-footer-legal">
+    <b>Confidencialidad:</b> los datos que ingresás (nombre y respuestas) se usan únicamente para calcular tu resultado y se almacenan de forma privada; no se comparten con terceros ni se utilizan con fines comerciales.
+    Este test es una herramienta de orientación y no reemplaza una evaluación vocacional profesional certificada.
+  </p>
+</footer>
 
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>

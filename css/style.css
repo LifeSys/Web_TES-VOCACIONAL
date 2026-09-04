@@ -329,12 +329,38 @@ button{ font-family:inherit; }
   transition:transform .1s ease;
 }
 .opt input:checked + .bullet::after{ transform:scale(1); }
+.opt-key{
+  flex:none;
+  min-width:20px;
+  padding:2px 6px;
+  border-radius:5px;
+  border:1px solid var(--border);
+  background:var(--surface-2);
+  color:var(--text-muted);
+  font-size:.75rem;
+  font-weight:600;
+  text-align:center;
+}
+.opt:has(input:checked) .opt-key{ border-color:var(--accent); color:var(--accent); }
 .opt:has(input:checked){
   border-color:var(--accent);
   background:color-mix(in srgb, var(--accent) 8%, var(--bg));
 }
 .opt:has(input:checked) .bullet{ border-color:var(--accent); }
 .opt:has(input:focus-visible){ outline:2.5px solid var(--accent); outline-offset:2px; }
+
+.kbd-hint{
+  margin:14px 2px 0;
+  font-size:.78rem;
+  color:var(--text-muted);
+}
+.kbd-hint .mono{
+  background:var(--surface-2);
+  border:1px solid var(--border);
+  border-radius:4px;
+  padding:1px 5px;
+  color:var(--text);
+}
 
 .nav-row{
   display:flex;
@@ -510,8 +536,60 @@ details.atlas[open] summary::before{ content:"▾ "; }
 }
 .admin-link:hover{ color:var(--accent); }
 
+/* ---------- site footer ---------- */
+.site-footer{
+  max-width:760px;
+  margin:56px auto 0;
+  padding:26px 20px 32px;
+  border-top:1px solid var(--border);
+}
+.site-footer-top{
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-start;
+  flex-wrap:wrap;
+  gap:16px;
+  margin-bottom:16px;
+}
+.site-footer-brand{ display:flex; flex-direction:column; gap:2px; }
+.site-footer-brand strong{
+  font-family:"Manrope",sans-serif;
+  font-weight:800;
+  font-size:.95rem;
+  color:var(--text);
+}
+.site-footer-brand span{ font-size:.8rem; color:var(--text-muted); }
+.site-footer-contact{
+  display:flex;
+  flex-direction:column;
+  gap:4px;
+  font-size:.82rem;
+  color:var(--text-muted);
+  text-align:right;
+}
+.site-footer-contact a{ color:var(--accent-2); text-decoration:none; }
+.site-footer-contact a:hover{ text-decoration:underline; }
+.site-footer-legal{
+  font-size:.74rem;
+  line-height:1.6;
+  color:var(--text-muted);
+  max-width:70ch;
+  margin:8px 0 0;
+}
+.site-footer-legal b{ color:var(--text); font-weight:600; }
+
 @media (max-width:520px){
   .cover-card{ padding:34px 22px; }
   .q-card{ padding:26px 20px; }
   .atlas-row{ grid-template-columns:100px 1fr 36px; }
+  .site-footer-top{ flex-direction:column; }
+  .site-footer-contact{ text-align:left; }
+}
+
+/* ---------- print ---------- */
+@media print{
+  .no-print{ display:none !important; }
+  body{ background:#fff; }
+  .cover-card, .q-card, .rank-card{ box-shadow:none !important; border-color:#ccc; }
+  .site-footer{ border-top-color:#ccc; }
 }

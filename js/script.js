@@ -3,39 +3,39 @@
   var CLUSTERS = {
     ING:{ name:"Ingeniería y Tecnología", icon:"ing",
       blurb:"Construir, programar y optimizar el mundo físico y digital.",
-      careers:["Ingeniería Civil","Ingeniería Industrial","Ingeniería Mecánica","Ingeniería Eléctrica","Ingeniería Electrónica","Ingeniería de Sistemas","Ingeniería Informática","Ingeniería de Software","Ingeniería en Ciberseguridad","Ingeniería en Inteligencia Artificial y Ciencia de Datos","Ingeniería Mecatrónica","Ingeniería en Robótica","Ingeniería en Telecomunicaciones","Ingeniería Química","Ingeniería Ambiental","Ingeniería Aeronáutica","Ingeniería Aeroespacial","Ingeniería Naval","Ingeniería de Minas","Ingeniería del Petróleo","Ingeniería Biomédica","Ingeniería Nuclear","Ingeniería Textil","Ingeniería Geológica","Ingeniería Automotriz","Ingeniería Metalúrgica","Ingeniería en Videojuegos"],
+      careers:["Ingeniería Civil","Ingeniería Estructural","Ingeniería Arquitectónica","Ingeniería Industrial","Ingeniería Mecánica","Ingeniería Eléctrica","Ingeniería Electrónica","Ingeniería de Sistemas","Ingeniería Informática","Ingeniería de Software","Ingeniería en Ciberseguridad","Ingeniería en Inteligencia Artificial y Ciencia de Datos","Ingeniería Mecatrónica","Ingeniería en Robótica","Ingeniería en Telecomunicaciones","Ingeniería Química","Ingeniería de Materiales","Ingeniería Ambiental","Ingeniería Aeronáutica","Ingeniería Aeroespacial","Ingeniería Naval","Ingeniería de Minas","Ingeniería del Petróleo","Ingeniería Biomédica","Ingeniería Nuclear","Ingeniería Textil","Ingeniería Geológica","Ingeniería Topográfica y Geodésica","Ingeniería Automotriz","Ingeniería Metalúrgica","Ingeniería en Automatización y Control","Ingeniería Física","Ingeniería en Videojuegos"],
       short:["Técnico en Electrónica","Técnico en Electromecánica","Técnico Mecánico","Técnico en Mecánica Automotriz","Técnico en Instalaciones Eléctricas","Técnico en Refrigeración y Climatización","Técnico en Soldadura Industrial","Técnico en Programación / Desarrollo de Software","Analista de Sistemas","Técnico en Redes y Telecomunicaciones","Técnico en Mantenimiento Industrial","Técnico en Higiene y Seguridad en el Trabajo","Técnico en Energías Renovables","Técnico en Automatización y Control (PLC)","Técnico Superior en Construcciones","Operador en Mecanizado CNC","Técnico en Ciberseguridad","Técnico en Ciencia de Datos","Técnico en Desarrollo de Videojuegos"]},
     CEN:{ name:"Ciencias Exactas y Naturales", icon:"cen",
       blurb:"Investigar, medir y explicar cómo funciona el universo.",
-      careers:["Matemática","Física","Química","Biología","Bioquímica","Astronomía / Astrofísica","Estadística","Ciencia de Datos","Geología","Ciencias Ambientales","Biotecnología / Genética","Ciencias de la Computación"],
+      careers:["Matemática","Física","Química","Biología","Bioquímica","Astronomía / Astrofísica","Estadística","Ciencia de Datos","Geología","Ciencias Ambientales","Ciencias de la Atmósfera / Meteorología","Oceanografía","Paleontología","Biotecnología / Genética","Ciencias de la Computación"],
       short:["Técnico en Laboratorio de Análisis Químico y Biológico","Técnico en Análisis Ambiental","Técnico en Meteorología","Técnico en Estadística Aplicada","Técnico en Geociencias","Técnico en Biotecnología","Analista de Datos","Técnico Químico"]},
     SAL:{ name:"Ciencias de la Salud", icon:"sal",
       blurb:"Cuidar el cuerpo y el bienestar de las personas.",
-      careers:["Medicina","Enfermería","Odontología","Psicología","Farmacia","Nutrición y Dietética","Kinesiología / Fisioterapia","Medicina Veterinaria","Fonoaudiología","Obstetricia","Tecnología Médica","Terapia Ocupacional","Optometría","Radiología / Imagenología","Salud Pública","Podología","Gerontología"],
+      careers:["Medicina","Enfermería","Odontología","Psicología","Farmacia","Nutrición y Dietética","Kinesiología / Fisioterapia","Medicina Veterinaria","Fonoaudiología","Obstetricia","Tecnología Médica","Terapia Ocupacional","Optometría","Radiología / Imagenología","Salud Pública","Podología","Gerontología","Biomedicina"],
       short:["Técnico en Enfermería","Técnico en Emergencias Médicas (Paramédico)","Técnico en Radiología","Técnico en Laboratorio Clínico","Técnico en Farmacia","Técnico en Óptica y Contactología","Técnico en Estética y Cosmetología","Técnico en Prótesis Dental","Auxiliar en Odontología","Masoterapeuta","Técnico en Cuidado de Adultos Mayores","Técnico en Instrumentación Quirúrgica"]},
     SOC:{ name:"Ciencias Sociales, Humanidades y Derecho", icon:"soc",
       blurb:"Entender, argumentar y ordenar la vida en sociedad.",
-      careers:["Derecho","Sociología","Antropología","Filosofía","Historia","Ciencias Políticas","Relaciones Internacionales","Relaciones Laborales","Trabajo Social","Educación / Pedagogía","Teología","Lingüística","Criminología","Arqueología","Bibliotecología"],
+      careers:["Derecho","Sociología","Antropología","Filosofía","Historia","Geografía","Ciencias Políticas","Relaciones Internacionales","Relaciones Laborales","Administración y Gestión Pública","Trabajo Social","Educación Social","Educación / Pedagogía","Teología","Lingüística","Criminología","Arqueología","Bibliotecología"],
       short:["Técnico en Gestión Judicial","Técnico en Mediación y Resolución de Conflictos","Técnico en Acompañamiento Terapéutico","Técnico en Gestión Cultural","Técnico en Gestión Pública","Técnico en Archivología","Intérprete de Lengua de Señas","Técnico en Ceremonial y Protocolo"]},
     ECO:{ name:"Economía, Administración y Negocios", icon:"eco",
       blurb:"Organizar recursos, liderar equipos y hacer crecer proyectos.",
-      careers:["Administración de Empresas","Economía","Contaduría / Auditoría","Finanzas","Marketing","Negocios Internacionales / Comercio Exterior","Recursos Humanos","Logística y Cadena de Suministro","Banca y Seguros","Actuaría","Emprendimiento y Negocios Digitales","Ingeniería Comercial","Ingeniería en Finanzas","Gestión de Proyectos"],
+      careers:["Administración de Empresas","Economía","Contaduría / Auditoría","Finanzas","Marketing","Negocios Internacionales / Comercio Exterior","Recursos Humanos","Logística y Cadena de Suministro","Banca y Seguros","Actuaría","Emprendimiento y Negocios Digitales","Ingeniería Comercial","Ingeniería en Finanzas","Gestión de Proyectos","Sistemas de Información","Gestión Aeronáutica"],
       short:["Técnico en Administración de Empresas","Técnico en Gestión de Recursos Humanos","Técnico en Comercio Exterior","Martillero y Corredor Público","Técnico en Marketing y Ventas","Técnico en Contabilidad","Técnico en Logística","Técnico en Gestión de Pymes","Corredor Inmobiliario","Técnico en Seguros","Técnico en Comercio Electrónico"]},
     ART:{ name:"Artes, Diseño y Arquitectura", icon:"art",
       blurb:"Darle forma visual y espacial a una idea.",
-      careers:["Arquitectura","Diseño Gráfico","Diseño Industrial","Diseño de Interiores","Diseño de Modas","Bellas Artes","Música","Cine y Artes Audiovisuales","Teatro y Artes Escénicas","Danza","Fotografía","Animación Digital","Diseño de Videojuegos","Diseño Multimedia","Diseño de Experiencia de Usuario (UX/UI)","Ilustración"],
+      careers:["Arquitectura","Arquitectura del Paisaje","Diseño Gráfico","Diseño Industrial","Diseño de Interiores","Diseño de Modas","Bellas Artes","Historia del Arte","Conservación y Restauración de Bienes Culturales","Música","Diseño / Ingeniería de Sonido","Cine y Artes Audiovisuales","Teatro y Artes Escénicas","Danza","Fotografía","Animación Digital","Diseño de Videojuegos","Diseño Multimedia","Diseño de Experiencia de Usuario (UX/UI)","Ilustración"],
       short:["Técnico en Diseño Gráfico","Técnico en Diseño de Interiores","Técnico en Diseño de Indumentaria","Técnico en Ilustración","Técnico en Animación 2D/3D","Técnico en Producción Musical","Técnico en Maquillaje Artístico","Técnico en Escenografía","Técnico en Fotografía","Técnico en Postproducción Audiovisual","Técnico en Diseño Web / UX-UI","Técnico en Cerámica y Artesanías"]},
     COM:{ name:"Comunicación y Letras", icon:"com",
       blurb:"Contar, escribir y traducir ideas para que lleguen a otros.",
-      careers:["Comunicación Social","Periodismo","Publicidad","Letras / Literatura","Traducción e Interpretación","Relaciones Públicas","Producción Multimedia","Marketing Digital / Community Management","Guion y Narrativa Audiovisual"],
+      careers:["Comunicación Social","Periodismo","Publicidad","Letras / Literatura","Traducción e Interpretación","Relaciones Públicas","Comunicación Institucional y Corporativa","Producción Multimedia","Marketing Digital / Community Management","Guion y Narrativa Audiovisual"],
       short:["Técnico en Producción Periodística","Locutor Nacional","Técnico en Community Management","Técnico en Producción Radial y Televisiva","Corrector de Estilo","Técnico en Guion para Cine y TV","Técnico en Contenidos Digitales","Técnico en Doblaje"]},
     AGR:{ name:"Ciencias Agropecuarias y Ambientales", icon:"agr",
       blurb:"Trabajar la tierra, los animales y los ecosistemas.",
-      careers:["Ingeniería Agronómica","Zootecnia","Ingeniería Forestal","Ingeniería Ambiental Agropecuaria","Acuicultura y Pesquería","Medicina Veterinaria y Zootecnia","Ingeniería Agroindustrial","Ingeniería en Alimentos","Biotecnología Agrícola"],
+      careers:["Ingeniería Agronómica","Ingeniería Agrícola","Agroecología","Agronegocios","Horticultura","Zootecnia","Ingeniería Forestal","Ingeniería Ambiental Agropecuaria","Acuicultura y Pesquería","Medicina Veterinaria y Zootecnia","Ingeniería Agroindustrial","Ingeniería en Alimentos","Biotecnología Agrícola"],
       short:["Técnico Agropecuario","Técnico en Producción Agropecuaria","Técnico en Jardinería y Paisajismo","Técnico en Viveros","Técnico en Apicultura","Técnico Forestal","Técnico en Piscicultura","Técnico en Manejo de Fauna Silvestre","Técnico en Gestión Ambiental","Técnico en Riego y Manejo de Agua"]},
     DEP:{ name:"Deporte y Actividad Física", icon:"dep",
       blurb:"Entrenar, competir y mejorar el rendimiento del cuerpo.",
-      careers:["Educación Física","Ciencias del Deporte","Entrenamiento Deportivo","Kinesiología Deportiva","Gestión y Administración Deportiva","Nutrición Deportiva","Ciencias del Ejercicio y la Salud"],
+      careers:["Educación Física","Ciencias del Deporte","Entrenamiento Deportivo","Kinesiología Deportiva","Gestión y Administración Deportiva","Nutrición Deportiva","Psicología del Deporte","Ciencias del Ejercicio y la Salud"],
       short:["Técnico en Actividades Físicas y Deportivas","Instructor de Educación Física","Entrenador Personal","Instructor de Yoga y Pilates","Guardavidas","Instructor de Natación","Técnico en Gestión de Instalaciones Deportivas","Preparador Físico"]},
     SEG:{ name:"Seguridad, Defensa y Servicio Público", icon:"seg",
       blurb:"Proteger personas y sostener el orden bajo presión.",
@@ -49,7 +49,12 @@
 
   var CLUSTER_ORDER = ["ING","CEN","SAL","SOC","ECO","ART","COM","AGR","DEP","SEG","GAS"];
 
-  // 33 preguntas · cada área aparece exactamente 15 veces (33 = 3 vueltas de 11).
+  // 50 preguntas en total, mezcla de dos estilos a propósito para que no sea
+  // obvio qué área mide cada una: las primeras 33 son situaciones concretas
+  // ("¿qué harías si...?") y las últimas 17 son frases de autodescripción
+  // ("te identificás más con..."). Cada área aparece entre 20 y 24 veces —
+  // el % final se calcula sobre el máximo real de cada una (ver CLUSTER_MAX),
+  // así que no hace falta que el reparto sea perfectamente parejo.
   // Lenguaje simple a propósito: frases cortas, palabras de todos los días.
   var QUESTIONS = [
   {t:"Es sábado y no tenés nada planeado. ¿Cuál de estas tareas elegirías para pasar la tarde?", o:[
@@ -249,7 +254,112 @@
     ["AGR","Aprender de dónde viene la comida que comemos."],
     ["DEP","Superar un récord personal, aunque sea chico."],
     ["SEG","Cuidar que nadie se lastime en un evento."],
-    ["GAS","Inventar una mezcla nueva de sabores."]]}
+    ["GAS","Inventar una mezcla nueva de sabores."]]},
+
+  // A partir de acá: frases sobre cómo sos, no sobre qué harías.
+  // Están mezcladas a propósito para que no sea obvio a qué área apunta cada una.
+  {t:"¿Con cuál de estas frases te identificás más?", o:[
+    ["ING","Te gusta entender cómo funcionan las cosas por dentro."],
+    ["CEN","Te gusta hacerte preguntas que no tienen una respuesta fácil."],
+    ["SAL","Te importa mucho el bienestar de la gente que querés."],
+    ["SOC","Te molesta ver algo injusto, aunque no te afecte a vos."],
+    ["ECO","Te gusta que las cosas rindan al máximo con lo que hay."]]},
+  {t:"Elegí la frase que más se parece a vos:", o:[
+    ["ART","Te importa mucho cómo se ve algo, no solo cómo funciona."],
+    ["COM","Te gusta encontrar la palabra exacta para algo difícil de explicar."],
+    ["AGR","Te relaja estar en contacto con la naturaleza."],
+    ["DEP","Te gusta medirte con vos mismo más que con otros."],
+    ["SEG","Te mantenés tranquilo cuando otros entran en pánico."]]},
+  {t:"¿Cuál de estas afirmaciones te representa mejor?", o:[
+    ["GAS","Te gusta que un detalle haga sentir bien a alguien."],
+    ["ING","Preferís arreglar algo roto antes que tirarlo y comprar otro."],
+    ["CEN","Preferís comprobar algo con datos antes de creerlo porque sí."],
+    ["SAL","Te ponés en el lugar del otro casi sin darte cuenta."],
+    ["SOC","Te gusta entender por qué la gente piensa distinto a vos."]]},
+  {t:"Pensá en vos: ¿cuál de estas frases es más cierta?", o:[
+    ["ECO","Preferís tener un plan antes de empezar algo importante."],
+    ["ART","Notás detalles visuales que otros ni registran."],
+    ["COM","Preferís contar lo que pasó antes que solo vivirlo en silencio."],
+    ["AGR","Preferís algo que crece de a poco antes que algo instantáneo."],
+    ["DEP","Preferís el esfuerzo físico a quedarte quieto todo el día."]]},
+  {t:"¿Qué opción te describe mejor la mayoría de las veces?", o:[
+    ["SEG","Preferís seguir un plan antes que improvisar en una emergencia."],
+    ["GAS","Notás sabores o aromas que otros pasan por alto."],
+    ["ING","Te frustra usar algo mal diseñado y pensás en cómo mejorarlo."],
+    ["CEN","Te interesa más el porqué de las cosas que el cómo se usan."],
+    ["SAL","Preferís acompañar a alguien antes que dejarlo solo con su problema."]]},
+  {t:"De estas frases, ¿cuál sentís más tuya?", o:[
+    ["SOC","Preferís discutir con argumentos antes que evitar el tema."],
+    ["ECO","Te importa que un proyecto se sostenga en el tiempo, no solo al principio."],
+    ["ART","Preferís crear algo nuevo antes que copiar lo que ya existe."],
+    ["COM","Te interesa cómo un mensaje puede cambiar lo que la gente piensa."],
+    ["AGR","Te importa de dónde viene lo que consumís."]]},
+  {t:"¿Cuál de estas cosas te pasa más seguido?", o:[
+    ["DEP","Te motiva superar un límite propio, aunque sea chico."],
+    ["SEG","Te importa que las reglas se cumplan, aunque nadie te mire."],
+    ["GAS","Preferís que un invitado se vaya contento antes que lucirte vos."],
+    ["ING","Disfrutás armar cosas siguiendo pasos exactos, sin saltarte ninguno."],
+    ["CEN","Disfrutás encontrar un patrón donde otros ven solo desorden."]]},
+  {t:"Marcá la frase con la que más estás de acuerdo:", o:[
+    ["SAL","Te cuesta ver a alguien sufrir sin hacer nada para ayudar."],
+    ["SOC","Te interesa cómo se organiza la sociedad y por qué."],
+    ["ECO","Disfrutás negociar hasta llegar a un buen trato para los dos."],
+    ["ART","Te gusta que las cosas tengan una estética propia y cuidada."],
+    ["COM","Disfrutás que una historia tenga el ritmo justo, ni de más ni de menos."]]},
+  {t:"¿Qué te define mejor?", o:[
+    ["AGR","Disfrutás cuidar algo vivo, sea planta o animal."],
+    ["DEP","Disfrutás la disciplina de repetir algo hasta mejorarlo."],
+    ["SEG","Estás dispuesto a asumir un riesgo para proteger a otros."],
+    ["GAS","Disfrutás crear una experiencia completa, no solo un producto."],
+    ["ING","Te dan ganas de desarmar un aparato solo para ver qué tiene adentro."]]},
+  {t:"¿Cuál de estas frases dirían tus amigos sobre vos?", o:[
+    ["CEN","Te gusta medir o contar cosas, aunque a nadie más le importe."],
+    ["SAL","Notás enseguida cuando alguien cercano no está bien."],
+    ["SOC","Defendés tu postura aunque la mayoría opine distinto."],
+    ["ECO","Te gusta llevar la cuenta de en qué se gasta la plata."],
+    ["ART","Reacomodás algo hasta que \"se vea bien\", aunque tarde más."]]},
+  {t:"Pensando en cómo sos, ¿qué opción elegís?", o:[
+    ["COM","Corregís un texto varias veces hasta que quede claro."],
+    ["AGR","Te gusta trabajar al aire libre más que encerrado."],
+    ["DEP","Te cuesta quedarte sin moverte por mucho tiempo."],
+    ["SEG","Te gusta tener todo bajo control y ordenado."],
+    ["GAS","Te gusta combinar cosas hasta encontrar la mezcla perfecta."]]},
+  {t:"¿Con qué frase te sentís más identificado?", o:[
+    ["ING","Preferís construir algo con tus manos antes que comprarlo hecho."],
+    ["CEN","Preferís entender algo a fondo antes de opinar sobre eso."],
+    ["SAL","Te da tranquilidad cuidar de alguien que lo necesita."],
+    ["SOC","Te gusta leer o escuchar sobre cómo vivía la gente antes."],
+    ["ECO","Preferís liderar un grupo antes que seguir instrucciones de otro."]]},
+  {t:"¿Cuál de estas ideas se parece más a tu forma de ser?", o:[
+    ["ART","Te expresás mejor con imágenes, sonidos o movimiento que con palabras."],
+    ["COM","Te gusta hacer preguntas hasta entender bien una historia."],
+    ["AGR","Sos paciente con procesos que tardan meses en dar resultado."],
+    ["DEP","Preferís competir a que todo quede en un empate."],
+    ["SEG","Preferís actuar rápido antes que quedarte pensando en una emergencia."]]},
+  {t:"Elegí la afirmación que más te representa:", o:[
+    ["GAS","Te fijás que a todos les guste lo que serviste."],
+    ["ING","Te interesa más resolver un problema técnico que uno de personas."],
+    ["CEN","Te da curiosidad cómo funciona el universo o la naturaleza."],
+    ["SAL","Preferís actuar rápido cuando alguien se lastima, más que quedarte mirando."],
+    ["SOC","Preferís mediar un conflicto antes que ignorarlo."]]},
+  {t:"¿Qué es más cierto sobre vos?", o:[
+    ["ECO","Te interesa más hacer crecer algo que mantenerlo igual."],
+    ["ART","Preferís improvisar algo creativo antes que seguir un molde fijo."],
+    ["COM","Preferís escribir o hablar tus ideas antes que guardártelas."],
+    ["AGR","Te preocupa cómo tratamos al medioambiente."],
+    ["DEP","Te gusta que tu cuerpo responda cuando lo exigís."]]},
+  {t:"¿Cuál de estas frases resume mejor cómo sos?", o:[
+    ["SEG","Te da confianza saber exactamente qué hacer si algo sale mal."],
+    ["GAS","Te da gusto recibir gente en tu casa y que se sientan cómodos."],
+    ["ING","Sentís satisfacción cuando algo mecánico queda funcionando perfecto."],
+    ["CEN","Revisás dos veces un resultado antes de confiar en él."],
+    ["SAL","Te interesa entender cómo funciona el cuerpo humano."]]},
+  {t:"Para terminar: ¿con cuál de estas frases te quedás?", o:[
+    ["SOC","Te importa que las reglas sean justas para todos, no solo para algunos."],
+    ["ECO","Calculás el riesgo antes de decidir algo importante."],
+    ["ART","Te emociona más una idea original que una bien copiada."],
+    ["COM","Te importa cómo suena o se lee algo, no solo lo que dice."],
+    ["AGR","Preferís un trabajo físico y al aire libre antes que uno de oficina."]]}
   ];
 
   function shuffle(arr){
@@ -284,6 +394,9 @@
 
   var $ = function(id){ return document.getElementById(id); };
 
+  var footerYearEl = $("footerYear");
+  if (footerYearEl) footerYearEl.textContent = new Date().getFullYear();
+
   $("startBtn").addEventListener("click", function(){
     newSession();
     $("screen-cover").hidden = true;
@@ -315,6 +428,7 @@
         '<label>' +
           '<input type="radio" name="q'+i+'" value="'+oi+'" '+checked+'>' +
           '<span class="bullet"></span>' +
+          '<span class="opt-key mono">'+(oi+1)+'</span>' +
           '<span>'+opt[1]+'</span>' +
         '</label>';
       list.appendChild(li);
@@ -343,6 +457,27 @@
     if(state.idx === 0) return;
     state.idx--;
     renderQuestion();
+  });
+
+  // Atajos de teclado durante el test: 1-5 elige la opción en esa posición,
+  // Enter avanza a la siguiente (o muestra el resultado en la última).
+  document.addEventListener("keydown", function(e){
+    if ($("screen-quiz").hidden) return;
+    if (e.key >= "1" && e.key <= "5"){
+      var idx = Number(e.key) - 1;
+      var q = sessionQuestions[state.idx];
+      if (!q || idx >= q.o.length) return;
+      e.preventDefault();
+      state.answers[state.idx] = idx;
+      renderQuestion();
+      var inputs = $("qOptions").querySelectorAll("input");
+      if (inputs[idx]) inputs[idx].focus();
+    } else if (e.key === "Enter"){
+      if (!$("nextBtn").disabled){
+        e.preventDefault();
+        $("nextBtn").click();
+      }
+    }
   });
 
   function computeScores(){
@@ -421,6 +556,15 @@
     $("screen-results").hidden = false;
     $("topBearing").textContent = "RESULTADO";
     window.scrollTo({top:0, behavior:"smooth"});
+
+    // Abre el diálogo de impresión de Windows apenas se ve el resultado.
+    // Por seguridad del navegador ninguna página puede imprimir sin que la
+    // persona confirme el diálogo — esto lo abre automáticamente para que
+    // solo haga falta un clic en "Imprimir", con la impresora predeterminada
+    // ya seleccionada.
+    setTimeout(function(){
+      try { window.print(); } catch(e){ console.warn("No se pudo abrir la impresión automática:", e); }
+    }, 400);
   }
 
   // Guarda solo el resultado final (nombre, fecha y áreas afines) en Firestore.
